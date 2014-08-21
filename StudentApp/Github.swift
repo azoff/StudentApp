@@ -9,21 +9,26 @@
 import Foundation
 import UIKit
 
-class Github : OAuth2CodeGrant {
+class Github  {
     
+    let serviceName : String = "Github"
+
     init() {
-        if let settings = Credentials.dict("Github") {
-            super.init(settings: settings)
+        if let config = Credentials.dict(serviceName) {
+            let store = NXOAuth2AccountStore.sharedStore() as NXOAuth2AccountStore
+            store.setConfiguration(config, forAccountType:serviceName);
+
         } else {
             fatalError("init(): missing github settings")
         }
     }
     
-    func authorize(authorized _authorized:((parameters: NSDictionary) -> Void), failure _failure:((error: NSError) -> Void)) {
-        onFailure = _failure
-        onAuthorize = _authorized
-        let url = self.authorizeURLWithRedirect(Info.callbackUrl, scope: "", params: nil)
-        UIApplication.sharedApplication().openURL(url)
+    func authorize() {
+        
+    }
+    
+    func handleRedirectURL(url : NSURL) {
+        
     }
     
     class var singleton : Github {

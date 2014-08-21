@@ -31,7 +31,7 @@
 		C98C7BC019A679B7008D1650 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BBF19A679B7008D1650 /* MobileCoreServices.framework */; };
 		C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC119A679C3008D1650 /* Security.framework */; };
 		C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */; };
-		C98C7BC619A67A68008D1650 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* Parse.swift */; };
+		C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* ParseApp.swift */; };
 		C98C7BD119A67E46008D1650 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
 /* End PBXBuildFile section */
 
@@ -72,10 +72,10 @@
 		C94578C919A51EC900073562 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C945790919A5337800073562 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
 		C945790B19A534E100073562 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		C976ADB319A565AB00436917 /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		C976ADB319A565AB00436917 /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		C976ADB919A56EB800436917 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		C976ADC319A57B6100436917 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		C976ADC519A5B27100436917 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		C976ADC519A5B27100436917 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		C976ADC719A5BADF00436917 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C98C7BAF19A67951008D1650 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C98C7BB119A67966008D1650 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -88,8 +88,9 @@
 		C98C7BBF19A679B7008D1650 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C98C7BC119A679C3008D1650 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C98C7BC519A67A68008D1650 /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		C98C7BC519A67A68008D1650 /* ParseApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseApp.swift; sourceTree = "<group>"; };
 		C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = Submodules/OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
+		C98C7BD419A6879A008D1650 /* StudentApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudentApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +154,7 @@
 				C94578AB19A4715100073562 /* Main.storyboard */,
 				C94578AE19A4715100073562 /* Images.xcassets */,
 				C94578A519A4715100073562 /* Supporting Files */,
+				C98C7BD419A6879A008D1650 /* StudentApp-Bridging-Header.h */,
 			);
 			path = StudentApp;
 			sourceTree = "<group>";
@@ -215,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				C976ADB319A565AB00436917 /* Github.swift */,
-				C98C7BC519A67A68008D1650 /* Parse.swift */,
+				C98C7BC519A67A68008D1650 /* ParseApp.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -387,7 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C976ADC619A5B27100436917 /* HomeController.swift in Sources */,
-				C98C7BC619A67A68008D1650 /* Parse.swift in Sources */,
+				C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */,
 				C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */,
 				C94578CA19A51EC900073562 /* Theme.swift in Sources */,
 				C976ADBA19A56EB800436917 /* Plist.swift in Sources */,
@@ -511,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -518,12 +521,17 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					"$(SRCROOT)/Submodules/**",
+					"$(SRCROOT)/../Submodules/**",
 				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(BUILT_PRODUCTS_DIR)/libOAuth2Client.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StudentApp/StudentApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -532,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -539,12 +548,16 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					"$(SRCROOT)/Submodules/**",
+					"$(SRCROOT)/../Submodules/**",
 				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(BUILT_PRODUCTS_DIR)/libOAuth2Client.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StudentApp/StudentApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

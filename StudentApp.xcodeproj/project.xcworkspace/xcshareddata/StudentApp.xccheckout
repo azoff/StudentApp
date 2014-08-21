@@ -14,6 +14,8 @@
 		<string>github.com:p2/OAuth2.git</string>
 		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
 		<string>github.com:azoff/StudentApp.git</string>
+		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
+		<string>github.com:azoff/OAuth2Client.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>StudentApp.xcodeproj</string>
@@ -23,6 +25,8 @@
 		<string>../..Oauth2</string>
 		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
 		<string>../..</string>
+		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
+		<string>../../Submodules/OAuth2Client</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:azoff/StudentApp.git</string>
@@ -32,6 +36,14 @@
 	<string>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB5674475998A0DD33CD59076628ED3B93CBE9CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OAuth2Client</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

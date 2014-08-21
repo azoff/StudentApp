@@ -11,13 +11,13 @@ import UIKit
 class LoginController: BaseViewController {
     
     @IBAction func onLoginButton() {
-        Github.singleton.authorize(
-            authorized: {
-                self.performSegueWithIdentifier("push_home", sender: $0)
-            }, failure: {
-                println("OAUTH ERROR \($0)")
-            }
-        )
+        Github.singleton.authorize()
+//            authorized: {
+//                self.performSegueWithIdentifier("push_home", sender: $0)
+//            }, failure: {
+//                println("OAUTH ERROR \($0)")
+//            }
+//        )
     }
 
 }

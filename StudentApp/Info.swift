@@ -18,10 +18,6 @@ class Info : Plist {
         return schemes[0] as String
     }
     
-    class var callbackUrl : String {
-        return "\(self.appScheme)://callback"
-    }
-    
     override class var singleton : Info {
         struct Static {
             static let instance = Info(name: "Info")
