@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "StudentApp.Plist.subscript.getter (Swift.String) -&gt; Swift.AnyObject:Plist.swift">
+      </ContextState>
+      <ContextState
+         contextName = "StudentApp.Info.callbackUrl.getter : Swift.String:Info.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

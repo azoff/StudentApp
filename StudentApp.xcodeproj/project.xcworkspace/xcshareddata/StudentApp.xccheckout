@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57526729-2909-4357-93F5-D618CAD20A78</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StudentApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
+		<string>github.com:p2/OAuth2.git</string>
+		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
+		<string>github.com:azoff/StudentApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StudentApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
+		<string>../..Oauth2</string>
+		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:azoff/StudentApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StudentApp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2045D86BC5D391C299DCC498309E722E037BFF4E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StudentAppOauth2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
