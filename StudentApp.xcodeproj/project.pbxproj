@@ -20,13 +20,18 @@
 		C976ADC419A57B6100436917 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976ADC319A57B6100436917 /* Info.swift */; };
 		C976ADC619A5B27100436917 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976ADC519A5B27100436917 /* HomeController.swift */; };
 		C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976ADC719A5BADF00436917 /* BaseViewController.swift */; };
-		C98C7BA619A678DA008D1650 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7B9E19A678DA008D1650 /* extensions.swift */; };
-		C98C7BA719A678DA008D1650 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C98C7B9F19A678DA008D1650 /* Info.plist */; };
-		C98C7BA819A678DA008D1650 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BA119A678DA008D1650 /* OAuth2.swift */; };
-		C98C7BA919A678DA008D1650 /* OAuth2CodeGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BA219A678DA008D1650 /* OAuth2CodeGrant.swift */; };
-		C98C7BAA19A678DA008D1650 /* OAuth2ImplicitGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BA319A678DA008D1650 /* OAuth2ImplicitGrant.swift */; };
-		C98C7BAB19A678DA008D1650 /* OAuth2Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BA419A678DA008D1650 /* OAuth2Request.swift */; };
-		C98C7BAC19A678DA008D1650 /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BA519A678DA008D1650 /* OAuth2WebViewController.swift */; };
+		C98C7BB019A67951008D1650 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BAF19A67951008D1650 /* Parse.framework */; };
+		C98C7BB219A67966008D1650 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BB119A67966008D1650 /* CoreLocation.framework */; };
+		C98C7BB419A6796E008D1650 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BB319A6796E008D1650 /* StoreKit.framework */; };
+		C98C7BB619A67976008D1650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BB519A67976008D1650 /* CoreGraphics.framework */; };
+		C98C7BB819A6797E008D1650 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BB719A6797E008D1650 /* QuartzCore.framework */; };
+		C98C7BBA19A6798C008D1650 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BB919A6798C008D1650 /* libz.1.1.3.dylib */; };
+		C98C7BBC19A6799F008D1650 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BBB19A6799F008D1650 /* AudioToolbox.framework */; };
+		C98C7BBE19A679A4008D1650 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BBD19A679A4008D1650 /* CFNetwork.framework */; };
+		C98C7BC019A679B7008D1650 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BBF19A679B7008D1650 /* MobileCoreServices.framework */; };
+		C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC119A679C3008D1650 /* Security.framework */; };
+		C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */; };
+		C98C7BC619A67A68008D1650 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* Parse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +62,18 @@
 		C976ADC319A57B6100436917 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		C976ADC519A5B27100436917 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C976ADC719A5BADF00436917 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		C98C7B9E19A678DA008D1650 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
-		C98C7B9F19A678DA008D1650 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C98C7BA019A678DA008D1650 /* OAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2.h; sourceTree = "<group>"; };
-		C98C7BA119A678DA008D1650 /* OAuth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2.swift; sourceTree = "<group>"; };
-		C98C7BA219A678DA008D1650 /* OAuth2CodeGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrant.swift; sourceTree = "<group>"; };
-		C98C7BA319A678DA008D1650 /* OAuth2ImplicitGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ImplicitGrant.swift; sourceTree = "<group>"; };
-		C98C7BA419A678DA008D1650 /* OAuth2Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Request.swift; sourceTree = "<group>"; };
-		C98C7BA519A678DA008D1650 /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewController.swift; sourceTree = "<group>"; };
+		C98C7BAF19A67951008D1650 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C98C7BB119A67966008D1650 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C98C7BB319A6796E008D1650 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C98C7BB519A67976008D1650 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C98C7BB719A6797E008D1650 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C98C7BB919A6798C008D1650 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		C98C7BBB19A6799F008D1650 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C98C7BBD19A679A4008D1650 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C98C7BBF19A679B7008D1650 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C98C7BC119A679C3008D1650 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C98C7BC519A67A68008D1650 /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */,
+				C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */,
+				C98C7BB419A6796E008D1650 /* StoreKit.framework in Frameworks */,
+				C98C7BC019A679B7008D1650 /* MobileCoreServices.framework in Frameworks */,
+				C98C7BBE19A679A4008D1650 /* CFNetwork.framework in Frameworks */,
+				C98C7BBC19A6799F008D1650 /* AudioToolbox.framework in Frameworks */,
+				C98C7BBA19A6798C008D1650 /* libz.1.1.3.dylib in Frameworks */,
+				C98C7BB819A6797E008D1650 /* QuartzCore.framework in Frameworks */,
+				C98C7BB619A67976008D1650 /* CoreGraphics.framework in Frameworks */,
+				C98C7BB219A67966008D1650 /* CoreLocation.framework in Frameworks */,
+				C98C7BB019A67951008D1650 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +108,7 @@
 		C945789919A4715100073562 = {
 			isa = PBXGroup;
 			children = (
+				C98C7BAE19A67951008D1650 /* Frameworks */,
 				C98C7B9C19A678C6008D1650 /* Submodules */,
 				C94578A419A4715100073562 /* StudentApp */,
 				C94578B719A4715200073562 /* StudentAppTests */,
@@ -177,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				C976ADB319A565AB00436917 /* Github.swift */,
+				C98C7BC519A67A68008D1650 /* Parse.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -192,25 +214,26 @@
 		C98C7B9C19A678C6008D1650 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				C98C7B9D19A678DA008D1650 /* OAuth2 */,
 			);
 			name = Submodules;
 			sourceTree = "<group>";
 		};
-		C98C7B9D19A678DA008D1650 /* OAuth2 */ = {
+		C98C7BAE19A67951008D1650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C98C7B9E19A678DA008D1650 /* extensions.swift */,
-				C98C7B9F19A678DA008D1650 /* Info.plist */,
-				C98C7BA019A678DA008D1650 /* OAuth2.h */,
-				C98C7BA119A678DA008D1650 /* OAuth2.swift */,
-				C98C7BA219A678DA008D1650 /* OAuth2CodeGrant.swift */,
-				C98C7BA319A678DA008D1650 /* OAuth2ImplicitGrant.swift */,
-				C98C7BA419A678DA008D1650 /* OAuth2Request.swift */,
-				C98C7BA519A678DA008D1650 /* OAuth2WebViewController.swift */,
+				C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */,
+				C98C7BC119A679C3008D1650 /* Security.framework */,
+				C98C7BBF19A679B7008D1650 /* MobileCoreServices.framework */,
+				C98C7BBD19A679A4008D1650 /* CFNetwork.framework */,
+				C98C7BBB19A6799F008D1650 /* AudioToolbox.framework */,
+				C98C7BB919A6798C008D1650 /* libz.1.1.3.dylib */,
+				C98C7BB719A6797E008D1650 /* QuartzCore.framework */,
+				C98C7BB519A67976008D1650 /* CoreGraphics.framework */,
+				C98C7BB319A6796E008D1650 /* StoreKit.framework */,
+				C98C7BB119A67966008D1650 /* CoreLocation.framework */,
+				C98C7BAF19A67951008D1650 /* Parse.framework */,
 			);
-			name = OAuth2;
-			path = Submodules/Oauth2/OAuth2;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +316,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98C7BA719A678DA008D1650 /* Info.plist in Resources */,
 				C94578AD19A4715100073562 /* Main.storyboard in Resources */,
 				C945790A19A5337800073562 /* Credentials.plist in Resources */,
 				C94578AF19A4715100073562 /* Images.xcassets in Resources */,
@@ -315,19 +337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C976ADC619A5B27100436917 /* HomeController.swift in Sources */,
+				C98C7BC619A67A68008D1650 /* Parse.swift in Sources */,
 				C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */,
-				C98C7BAC19A678DA008D1650 /* OAuth2WebViewController.swift in Sources */,
 				C94578CA19A51EC900073562 /* Theme.swift in Sources */,
-				C98C7BA819A678DA008D1650 /* OAuth2.swift in Sources */,
 				C976ADBA19A56EB800436917 /* Plist.swift in Sources */,
-				C98C7BAA19A678DA008D1650 /* OAuth2ImplicitGrant.swift in Sources */,
-				C98C7BAB19A678DA008D1650 /* OAuth2Request.swift in Sources */,
 				C976ADB419A565AB00436917 /* Github.swift in Sources */,
-				C98C7BA619A678DA008D1650 /* extensions.swift in Sources */,
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
 				C945790C19A534E100073562 /* Credentials.swift in Sources */,
 				C94578A819A4715100073562 /* AppDelegate.swift in Sources */,
-				C98C7BA919A678DA008D1650 /* OAuth2CodeGrant.swift in Sources */,
 				C976ADC419A57B6100436917 /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

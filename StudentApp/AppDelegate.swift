@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = Theme.Color.WindowBackground
     }
 
-    func application(application: UIApplication!, openURL url: NSURL!, sourceApplication: String!, annotation: AnyObject!) -> Bool {
+    func application(application: UIApplication!, openURL url: NSURL!,
+        sourceApplication: String!, annotation: AnyObject!) -> Bool {
         if url.scheme == Info.appScheme {
             Github.singleton.handleRedirectURL(url)
             return true
@@ -25,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
-    func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    func application(application: UIApplication!,
+        didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+        ParseApp.singleton.register()
         initWindow()
         return true
     }
