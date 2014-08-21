@@ -15,13 +15,6 @@
 		C94578CA19A51EC900073562 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578C919A51EC900073562 /* Theme.swift */; };
 		C945790A19A5337800073562 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = C945790919A5337800073562 /* Credentials.plist */; };
 		C945790C19A534E100073562 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945790B19A534E100073562 /* Credentials.swift */; };
-		C945794F19A560AE00073562 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945794719A560AE00073562 /* extensions.swift */; };
-		C945795019A560AE00073562 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C945794819A560AE00073562 /* Info.plist */; };
-		C945795119A560AE00073562 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945794A19A560AE00073562 /* OAuth2.swift */; };
-		C945795219A560AE00073562 /* OAuth2CodeGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945794B19A560AE00073562 /* OAuth2CodeGrant.swift */; };
-		C945795319A560AE00073562 /* OAuth2ImplicitGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945794C19A560AE00073562 /* OAuth2ImplicitGrant.swift */; };
-		C945795419A560AE00073562 /* OAuth2Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945794D19A560AE00073562 /* OAuth2Request.swift */; };
-		C945795519A560AE00073562 /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945794E19A560AE00073562 /* OAuth2WebViewController.swift */; };
 		C976ADB419A565AB00436917 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976ADB319A565AB00436917 /* Github.swift */; };
 		C976ADBA19A56EB800436917 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976ADB919A56EB800436917 /* Plist.swift */; };
 		C976ADC419A57B6100436917 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976ADC319A57B6100436917 /* Info.swift */; };
@@ -52,14 +45,6 @@
 		C94578C919A51EC900073562 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C945790919A5337800073562 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
 		C945790B19A534E100073562 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		C945794719A560AE00073562 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
-		C945794819A560AE00073562 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C945794919A560AE00073562 /* OAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2.h; sourceTree = "<group>"; };
-		C945794A19A560AE00073562 /* OAuth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2.swift; sourceTree = "<group>"; };
-		C945794B19A560AE00073562 /* OAuth2CodeGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrant.swift; sourceTree = "<group>"; };
-		C945794C19A560AE00073562 /* OAuth2ImplicitGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ImplicitGrant.swift; sourceTree = "<group>"; };
-		C945794D19A560AE00073562 /* OAuth2Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Request.swift; sourceTree = "<group>"; };
-		C945794E19A560AE00073562 /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewController.swift; sourceTree = "<group>"; };
 		C976ADB319A565AB00436917 /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		C976ADB919A56EB800436917 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		C976ADC319A57B6100436917 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
@@ -88,7 +73,6 @@
 		C945789919A4715100073562 = {
 			isa = PBXGroup;
 			children = (
-				C945791C19A55FDF00073562 /* Submodules */,
 				C94578A419A4715100073562 /* StudentApp */,
 				C94578B719A4715200073562 /* StudentAppTests */,
 				C94578A319A4715100073562 /* Products */,
@@ -171,30 +155,6 @@
 				C976ADC319A57B6100436917 /* Info.swift */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		C945791C19A55FDF00073562 /* Submodules */ = {
-			isa = PBXGroup;
-			children = (
-				C945794619A560AE00073562 /* OAuth2 */,
-			);
-			name = Submodules;
-			sourceTree = "<group>";
-		};
-		C945794619A560AE00073562 /* OAuth2 */ = {
-			isa = PBXGroup;
-			children = (
-				C945794719A560AE00073562 /* extensions.swift */,
-				C945794819A560AE00073562 /* Info.plist */,
-				C945794919A560AE00073562 /* OAuth2.h */,
-				C945794A19A560AE00073562 /* OAuth2.swift */,
-				C945794B19A560AE00073562 /* OAuth2CodeGrant.swift */,
-				C945794C19A560AE00073562 /* OAuth2ImplicitGrant.swift */,
-				C945794D19A560AE00073562 /* OAuth2Request.swift */,
-				C945794E19A560AE00073562 /* OAuth2WebViewController.swift */,
-			);
-			name = OAuth2;
-			path = Oauth2/OAuth2;
 			sourceTree = "<group>";
 		};
 		C976ADB219A5657200436917 /* Networking */ = {
@@ -293,7 +253,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C945795019A560AE00073562 /* Info.plist in Resources */,
 				C94578AD19A4715100073562 /* Main.storyboard in Resources */,
 				C945790A19A5337800073562 /* Credentials.plist in Resources */,
 				C94578AF19A4715100073562 /* Images.xcassets in Resources */,
@@ -314,19 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C945795419A560AE00073562 /* OAuth2Request.swift in Sources */,
-				C945795219A560AE00073562 /* OAuth2CodeGrant.swift in Sources */,
 				C976ADC619A5B27100436917 /* HomeController.swift in Sources */,
-				C945795519A560AE00073562 /* OAuth2WebViewController.swift in Sources */,
-				C945795119A560AE00073562 /* OAuth2.swift in Sources */,
 				C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */,
-				C945794F19A560AE00073562 /* extensions.swift in Sources */,
 				C94578CA19A51EC900073562 /* Theme.swift in Sources */,
 				C976ADBA19A56EB800436917 /* Plist.swift in Sources */,
 				C976ADB419A565AB00436917 /* Github.swift in Sources */,
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
 				C945790C19A534E100073562 /* Credentials.swift in Sources */,
-				C945795319A560AE00073562 /* OAuth2ImplicitGrant.swift in Sources */,
 				C94578A819A4715100073562 /* AppDelegate.swift in Sources */,
 				C976ADC419A57B6100436917 /* Info.swift in Sources */,
 			);
@@ -444,6 +397,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,6 +412,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
