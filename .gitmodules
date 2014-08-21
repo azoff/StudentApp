@@ -1,0 +1,3 @@
+[submodule "Oauth2"]
+	path = Oauth2
+	url = git@github.com:azoff/OAuth2.git
