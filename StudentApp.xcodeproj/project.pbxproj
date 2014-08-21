@@ -32,6 +32,7 @@
 		C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC119A679C3008D1650 /* Security.framework */; };
 		C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */; };
 		C98C7BC619A67A68008D1650 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* Parse.swift */; };
+		C98C7BD119A67E46008D1650 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = C94578A119A4715100073562;
 			remoteInfo = StudentApp;
+		};
+		C98C7BCD19A67E22008D1650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 942FFCD612315E0A00E6C65E;
+			remoteInfo = OAuth2Client.framework;
+		};
+		C98C7BCF19A67E22008D1650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = OAuth2Client;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,6 +89,7 @@
 		C98C7BC119A679C3008D1650 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C98C7BC519A67A68008D1650 /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = Submodules/OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98C7BD119A67E46008D1650 /* libOAuth2Client.a in Frameworks */,
 				C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */,
 				C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */,
 				C98C7BB419A6796E008D1650 /* StoreKit.framework in Frameworks */,
@@ -108,8 +125,8 @@
 		C945789919A4715100073562 = {
 			isa = PBXGroup;
 			children = (
+				C98C7BC719A67E16008D1650 /* Submodules */,
 				C98C7BAE19A67951008D1650 /* Frameworks */,
-				C98C7B9C19A678C6008D1650 /* Submodules */,
 				C94578A419A4715100073562 /* StudentApp */,
 				C94578B719A4715200073562 /* StudentAppTests */,
 				C94578A319A4715100073562 /* Products */,
@@ -211,13 +228,6 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		C98C7B9C19A678C6008D1650 /* Submodules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Submodules;
-			sourceTree = "<group>";
-		};
 		C98C7BAE19A67951008D1650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +244,23 @@
 				C98C7BAF19A67951008D1650 /* Parse.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		C98C7BC719A67E16008D1650 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */,
+			);
+			name = Submodules;
+			sourceTree = "<group>";
+		};
+		C98C7BC919A67E22008D1650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C98C7BCE19A67E22008D1650 /* OAuth2Client.framework */,
+				C98C7BD019A67E22008D1650 /* libOAuth2Client.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +330,12 @@
 			mainGroup = C945789919A4715100073562;
 			productRefGroup = C94578A319A4715100073562 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C98C7BC919A67E22008D1650 /* Products */;
+					ProjectRef = C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C94578A119A4715100073562 /* StudentApp */,
@@ -310,6 +343,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C98C7BCE19A67E22008D1650 /* OAuth2Client.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2Client.framework;
+			remoteRef = C98C7BCD19A67E22008D1650 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C98C7BD019A67E22008D1650 /* libOAuth2Client.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOAuth2Client.a;
+			remoteRef = C98C7BCF19A67E22008D1650 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C94578A019A4715100073562 /* Resources */ = {
@@ -465,8 +515,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Submodules/**",
+				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -480,8 +536,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Submodules/**",
+				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
