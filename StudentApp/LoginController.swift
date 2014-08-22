@@ -10,14 +10,33 @@ import UIKit
 
 class LoginController: BaseViewController {
     
+    private let notifs = NSNotificationCenter.defaultCenter()
+    private var success, failure : NSObjectProtocol?
+
     @IBAction func onLoginButton() {
         Github.singleton.authorize()
-//            authorized: {
-//                self.performSegueWithIdentifier("push_home", sender: $0)
-//            }, failure: {
-//                println("OAUTH ERROR \($0)")
-//            }
-//        )
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //TODO: This should move to the application level...
+        let successEvent = NXOAuth2AccountStoreAccountsDidChangeNotification
+        success = notifs.addObserverForName(successEvent, object: Github.singleton.oauth, queue: nil) {
+            self.performSegueWithIdentifier("push_home", sender: $0.userInfo)
+        }
+        let failureEvent = NXOAuth2AccountStoreDidFailToRequestAccessNotification
+        failure = notifs.addObserverForName(failureEvent, object: Github.singleton.oauth, queue: nil) {
+            println("OAUTH ERROR \($0)")
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        if let success = success {
+            notifs.removeObserver(success)
+        }
+        if let failure = failure {
+            notifs.removeObserver(failure)
+        }
     }
 
 }
