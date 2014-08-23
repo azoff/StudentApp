@@ -12,6 +12,8 @@
 	<dict>
 		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
 		<string>github.com:p2/OAuth2.git</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>github.com:Alamofire/Alamofire.git</string>
 		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
 		<string>github.com:azoff/StudentApp.git</string>
 		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
@@ -23,6 +25,8 @@
 	<dict>
 		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
 		<string>../..Oauth2</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../../Submodules/Alamofire/</string>
 		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
 		<string>../..</string>
 		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
@@ -36,6 +40,14 @@
 	<string>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

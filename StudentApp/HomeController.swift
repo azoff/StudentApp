@@ -11,6 +11,7 @@ import UIKit
 class HomeController: BaseViewController {
 
     @IBOutlet weak var label: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -19,11 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, openURL url: NSURL!,
         sourceApplication: String!, annotation: AnyObject!) -> Bool {
-        if url.scheme == Info.appScheme {
-            Github.singleton.handleRedirectURL(url)
-            return true
-        }
-        return false
+        return Github.singleton.handleRedirectURL(url)
     }
     
     func application(application: UIApplication!,

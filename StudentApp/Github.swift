@@ -12,11 +12,18 @@ import UIKit
 class Github  {
     
     private let accountType = "Github"
-    let oauth : NXOAuth2AccountStore
+    private let oauth : NXOAuth2AccountStore // TODO: should be private...
+    var account : NXOAuth2Account?
+    var onAuthorize, onDeauthorize : (() -> Void)?
+    var onError : ((NSError) -> Void)?
+
 
     init() {
+
         if let dict = Credentials.dict(accountType) {
+
             oauth = NXOAuth2AccountStore.sharedStore() as NXOAuth2AccountStore
+
             let config = NSMutableDictionary()
             config[kNXOAuth2AccountStoreConfigurationClientID] = dict["client_id"]!
             config[kNXOAuth2AccountStoreConfigurationSecret] = dict["client_secret"]!
@@ -24,6 +31,27 @@ class Github  {
             config[kNXOAuth2AccountStoreConfigurationTokenURL] = NSURL.URLWithString(dict["token_uri"]!)
             config[kNXOAuth2AccountStoreConfigurationRedirectURL] = NSURL.URLWithString(dict["redirect_uri"]!)
             oauth.setConfiguration(config, forAccountType:accountType)
+
+            let notifs = NSNotificationCenter.defaultCenter()
+            let successEvent = NXOAuth2AccountStoreAccountsDidChangeNotification
+            notifs.addObserverForName(successEvent, object: self.oauth, queue: nil) {
+                let acct : AnyObject? = $0.userInfo![NXOAuth2AccountStoreNewAccountUserInfoKey]
+                if let acct = acct as? NXOAuth2Account {
+                    self.account = acct
+                    self.onAuthorize?()
+                } else {
+                    self.onDeauthorize?()
+                }
+            }
+
+            let failureEvent = NXOAuth2AccountStoreDidFailToRequestAccessNotification
+            notifs.addObserverForName(failureEvent, object: self.oauth, queue: nil, usingBlock: {
+                let err : AnyObject? = $0.userInfo![NXOAuth2AccountStoreErrorKey]
+                if let err = err as? NSError {
+                    self.onError?(err)
+                }
+            })
+
         } else {
             fatalError("init(): missing github settings")
         }
@@ -33,8 +61,8 @@ class Github  {
         oauth.requestAccessToAccountWithType(accountType)
     }
     
-    func handleRedirectURL(url : NSURL) {
-        oauth.handleRedirectURL(url)
+    func handleRedirectURL(url : NSURL) -> Bool {
+        return oauth.handleRedirectURL(url)
     }
     
     class var singleton : Github {
