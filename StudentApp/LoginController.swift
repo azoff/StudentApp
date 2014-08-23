@@ -22,7 +22,8 @@ class LoginController: BaseViewController {
         //TODO: This should move to the application level...
         let successEvent = NXOAuth2AccountStoreAccountsDidChangeNotification
         success = notifs.addObserverForName(successEvent, object: Github.singleton.oauth, queue: nil) {
-            self.performSegueWithIdentifier("push_home", sender: $0.userInfo)
+            let acct : AnyObject? = $0.userInfo![NXOAuth2AccountStoreNewAccountUserInfoKey]
+            self.performSegueWithIdentifier("push_home", sender: acct) // TODO: may be null...
         }
         let failureEvent = NXOAuth2AccountStoreDidFailToRequestAccessNotification
         failure = notifs.addObserverForName(failureEvent, object: Github.singleton.oauth, queue: nil) {
