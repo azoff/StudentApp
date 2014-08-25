@@ -3,3 +3,4 @@
 //
 
 #import "NXOAuth2.h"
+#import <Parse/Parse.h>

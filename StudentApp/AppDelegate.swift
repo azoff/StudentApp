@@ -24,9 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication!,
         didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        ParseApp.singleton.register()
         initWindow()
-        return true
+        return ParseApp.singleton.trackLaunch(launchOptions)
     }
 
 

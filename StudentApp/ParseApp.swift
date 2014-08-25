@@ -10,18 +10,19 @@ import Foundation
 
 class ParseApp {
     
-    let settings : NSDictionary
-    
     init() {
-        if let settings = Credentials.dict("Parse") {
-            self.settings = settings
+        if let dict = Credentials.dict("Parse") {
+            let appId = dict["application_id"] as String!
+            let clientKey = dict["client_key"] as String!
+            Parse.setApplicationId(appId, clientKey:clientKey);
         } else {
             fatalError("init(): missing parse settings")
         }
     }
     
-    func register() {
-        
+    func trackLaunch(launchOptions: NSDictionary!) -> Bool {
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        return true
     }
     
     class var singleton : ParseApp {
