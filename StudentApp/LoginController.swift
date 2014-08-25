@@ -13,9 +13,18 @@ class LoginController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: move to application level?
-        Github.singleton.onAuthorize = {
-            self.performSegueWithIdentifier("push_home", sender: nil)
+        Github.singleton.onAuthorize = segueToHomeController
+    }
+
+    override func viewDidAppear(animated:Bool) {
+        super.viewDidAppear(animated)
+        if Github.singleton.isAuthorized {
+            segueToHomeController()
         }
+    }
+
+    private func segueToHomeController() {
+        performSegueWithIdentifier("login_home", sender: self)
     }
 
     @IBAction func onLoginButton() {

@@ -38,7 +38,7 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <segue destination="Apq-oE-NEM" kind="show" identifier="push_home" id="WUQ-WE-ywl"/>
+                        <segue destination="Apq-oE-NEM" kind="show" identifier="login_home" id="WUQ-WE-ywl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

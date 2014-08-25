@@ -13,7 +13,7 @@ class Github  {
     
     private let accountType = "Github"
     private let oauth : NXOAuth2AccountStore // TODO: should be private...
-    var account : NXOAuth2Account?
+    private var _account : NXOAuth2Account?
     var onAuthorize, onDeauthorize : (() -> Void)?
     var onError : ((NSError) -> Void)?
 
@@ -35,13 +35,7 @@ class Github  {
             let notifs = NSNotificationCenter.defaultCenter()
             let successEvent = NXOAuth2AccountStoreAccountsDidChangeNotification
             notifs.addObserverForName(successEvent, object: self.oauth, queue: nil) {
-                let acct : AnyObject? = $0.userInfo![NXOAuth2AccountStoreNewAccountUserInfoKey]
-                if let acct = acct as? NXOAuth2Account {
-                    self.account = acct
-                    self.onAuthorize?()
-                } else {
-                    self.onDeauthorize?()
-                }
+                self.account = $0.userInfo?[NXOAuth2AccountStoreNewAccountUserInfoKey] as? NXOAuth2Account
             }
 
             let failureEvent = NXOAuth2AccountStoreDidFailToRequestAccessNotification
@@ -52,13 +46,36 @@ class Github  {
                 }
             })
 
+            self.syncKeychain()
+
         } else {
             fatalError("init(): missing github settings")
         }
     }
 
+    var account : NXOAuth2Account? {
+        didSet {
+            if account != nil {
+                self.onAuthorize?()
+            } else {
+                self.onDeauthorize?()
+            }
+        }
+    }
+
     func authorize() {
         oauth.requestAccessToAccountWithType(accountType)
+    }
+
+    var isAuthorized : Bool {
+        return account != nil
+    }
+
+    private func syncKeychain() {
+        for obj in oauth.accountsWithAccountType(accountType) {
+            self.account = obj as? NXOAuth2Account
+            break
+        }
     }
 
     func user(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
