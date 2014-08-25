@@ -32,7 +32,7 @@
 		<key>8DEC644EF4EEA2B8C2F6626608C69A870CFA8579</key>
 		<string>../..</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
-		<string>../../Submodules/SwiftyJSON/</string>
+		<string>../../Submodules/SwiftyJSON</string>
 		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
 		<string>../../Submodules/OAuth2Client</string>
 	</dict>

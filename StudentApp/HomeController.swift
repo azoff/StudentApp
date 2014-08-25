@@ -10,12 +10,12 @@ import UIKit
 
 class HomeController: BaseViewController {
 
-    @IBOutlet weak var label: UITextView!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Github.singleton.user {
-            println($0.json)
+            self.label.text = "Hello \($0.firstName!)!"
         }
     }
 

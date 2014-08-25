@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
@@ -58,18 +57,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Logged In!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCJ-2E-YvJ">
-                                <rect key="frame" x="16" y="20" width="288" height="548"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Data..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLj-Mw-C4j">
+                                <rect key="frame" x="101.5" y="273.5" width="117" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="PCJ-2E-YvJ" secondAttribute="trailing" id="N3V-5Z-udr"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="PCJ-2E-YvJ" secondAttribute="bottom" id="NQx-Ac-PlX"/>
-                            <constraint firstItem="PCJ-2E-YvJ" firstAttribute="leading" secondItem="QH2-Uz-Bcl" secondAttribute="leadingMargin" id="Syx-Jn-lVi"/>
-                            <constraint firstItem="PCJ-2E-YvJ" firstAttribute="top" secondItem="FSI-Xx-ovL" secondAttribute="bottom" id="u1l-d8-X75"/>
+                            <constraint firstAttribute="centerY" secondItem="MLj-Mw-C4j" secondAttribute="centerY" id="1uP-wn-p6S"/>
+                            <constraint firstAttribute="centerX" secondItem="MLj-Mw-C4j" secondAttribute="centerX" id="AAl-bd-i7D"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -78,7 +75,7 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <outlet property="label" destination="PCJ-2E-YvJ" id="N1q-xE-mBy"/>
+                        <outlet property="label" destination="MLj-Mw-C4j" id="N1q-xE-mBy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaR-JM-gqI" userLabel="First Responder" sceneMemberID="firstResponder"/>

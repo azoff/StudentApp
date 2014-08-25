@@ -71,7 +71,7 @@ class Github  {
                 if let error = error {
                     if let fn = failure { fn(error) }
                 } else if let data = data {
-                    if let fn = success { fn(User(data: data)) }
+                    if let fn = success { fn(User(data)) }
                 }
             });
     }
