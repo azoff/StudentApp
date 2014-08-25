@@ -60,11 +60,26 @@ class Github  {
     func authorize() {
         oauth.requestAccessToAccountWithType(accountType)
     }
-    
+
+    func user(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
+        NXOAuth2Request.performMethod("GET",
+            onResource: NSURL.URLWithString("https://api.github.com/user"),
+            usingParameters: nil,
+            withAccount: self.account?,
+            sendProgressHandler: nil, // TODO: add a progress handler
+            responseHandler: { (_, data : NSData?, error : NSError?) in
+                if let error = error {
+                    if let fn = failure { fn(error) }
+                } else if let data = data {
+                    if let fn = success { fn(User(data: data)) }
+                }
+            });
+    }
+
     func handleRedirectURL(url : NSURL) -> Bool {
         return oauth.handleRedirectURL(url)
     }
-    
+
     class var singleton : Github {
         struct Static {
             static let instance = Github()

@@ -1,3 +1,6 @@
 [submodule "Submodules/OAuth2Client"]
 	path = Submodules/OAuth2Client
 	url = git@github.com:azoff/OAuth2Client.git
+[submodule "Submodules/SwiftyJSON"]
+	path = Submodules/SwiftyJSON
+	url = git@github.com:azoff/SwiftyJSON.git

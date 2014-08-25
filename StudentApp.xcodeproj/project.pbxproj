@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
+		C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
+		C908153619AAD55F001890A8 /* JSONBackedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153519AAD55F001890A8 /* JSONBackedModel.swift */; };
+		C908153819AAEBDA001890A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153719AAEBDA001890A8 /* User.swift */; };
 		C94578A819A4715100073562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A719A4715100073562 /* AppDelegate.swift */; };
 		C94578AA19A4715100073562 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A919A4715100073562 /* LoginController.swift */; };
 		C94578AD19A4715100073562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94578AB19A4715100073562 /* Main.storyboard */; };
@@ -32,7 +36,6 @@
 		C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC119A679C3008D1650 /* Security.framework */; };
 		C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */; };
 		C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* ParseApp.swift */; };
-		C98C7BD119A67E46008D1650 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		C908153519AAD55F001890A8 /* JSONBackedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONBackedModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		C908153719AAEBDA001890A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C94578A219A4715100073562 /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94578A619A4715100073562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C94578A719A4715100073562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C94578A919A4715100073562 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C94578A919A4715100073562 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C94578AC19A4715100073562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C94578AE19A4715100073562 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C94578B419A4715200073562 /* StudentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +78,7 @@
 		C94578C919A51EC900073562 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C945790919A5337800073562 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
 		C945790B19A534E100073562 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		C976ADB319A565AB00436917 /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		C976ADB319A565AB00436917 /* Github.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		C976ADB919A56EB800436917 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		C976ADC319A57B6100436917 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		C976ADC519A5B27100436917 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
@@ -98,7 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98C7BD119A67E46008D1650 /* libOAuth2Client.a in Frameworks */,
+				C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */,
+				C98C7BB019A67951008D1650 /* Parse.framework in Frameworks */,
 				C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */,
 				C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */,
 				C98C7BB419A6796E008D1650 /* StoreKit.framework in Frameworks */,
@@ -109,7 +116,6 @@
 				C98C7BB819A6797E008D1650 /* QuartzCore.framework in Frameworks */,
 				C98C7BB619A67976008D1650 /* CoreGraphics.framework in Frameworks */,
 				C98C7BB219A67966008D1650 /* CoreLocation.framework in Frameworks */,
-				C98C7BB019A67951008D1650 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C908153419AAD4C2001890A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C908153519AAD55F001890A8 /* JSONBackedModel.swift */,
+				C908153719AAEBDA001890A8 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C945789919A4715100073562 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +161,7 @@
 		C94578A419A4715100073562 /* StudentApp */ = {
 			isa = PBXGroup;
 			children = (
+				C908153419AAD4C2001890A8 /* Models */,
 				C976ADB819A56EA600436917 /* Utils */,
 				C976ADB219A5657200436917 /* Networking */,
 				C94578C819A51E9900073562 /* Core */,
@@ -251,6 +267,7 @@
 		C98C7BC719A67E16008D1650 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				C908152F19AA64DA001890A8 /* SwiftyJSON.swift */,
 				C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */,
 			);
 			name = Submodules;
@@ -388,6 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C908153819AAEBDA001890A8 /* User.swift in Sources */,
+				C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */,
 				C976ADC619A5B27100436917 /* HomeController.swift in Sources */,
 				C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */,
 				C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */,
@@ -396,6 +415,7 @@
 				C976ADB419A565AB00436917 /* Github.swift in Sources */,
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
 				C945790C19A534E100073562 /* Credentials.swift in Sources */,
+				C908153619AAD55F001890A8 /* JSONBackedModel.swift in Sources */,
 				C94578A819A4715100073562 /* AppDelegate.swift in Sources */,
 				C976ADC419A57B6100436917 /* Info.swift in Sources */,
 			);
@@ -522,6 +542,7 @@
 					"$(inherited)",
 					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"$(SRCROOT)/Submodules/OAuth2Client/Sources/**",
+					"$(SRCROOT)/Submodules/SwiftyJSON/SwiftyJSON/**",
 				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -549,6 +570,7 @@
 					"$(inherited)",
 					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 					"$(SRCROOT)/Submodules/OAuth2Client/Sources/**",
+					"$(SRCROOT)/Submodules/SwiftyJSON/SwiftyJSON/**",
 				);
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
