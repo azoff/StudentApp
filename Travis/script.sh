@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-xctool -workspace MyWorkspace -scheme MyScheme build test
+xcodebuild -project StudentApp.xcodeproj -scheme StudentApp -sdk iphonesimulator8.0 -configuration Release TEST_AFTER_BUILD=YES
