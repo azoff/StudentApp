@@ -4,3 +4,6 @@
 [submodule "Submodules/SwiftyJSON"]
 	path = Submodules/SwiftyJSON
 	url = https://github.com/azoff/SwiftyJSON.git
+[submodule "Submodules/SVGKit"]
+	path = Submodules/SVGKit
+	url = https://github.com/azoff/SVGKit.git

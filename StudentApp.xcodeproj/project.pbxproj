@@ -48,6 +48,8 @@
 		C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC119A679C3008D1650 /* Security.framework */; };
 		C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */; };
 		C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* ParseApp.swift */; };
+		C9DA118F19AD482B00855700 /* codepath.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9DA118E19AD482B00855700 /* codepath.svg */; };
+		C9DA119819AD48E900855700 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DA119719AD48CA00855700 /* libSVGKit-iOS.1.2.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = OAuth2Client;
+		};
+		C9DA119619AD48CA00855700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6639618E16145D0400E58CCA;
+			remoteInfo = "SVGKit-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -121,6 +130,8 @@
 		C98C7BC519A67A68008D1650 /* ParseApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseApp.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = Submodules/OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		C98C7BD419A6879A008D1650 /* StudentApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudentApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9DA118E19AD482B00855700 /* codepath.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = codepath.svg; sourceTree = "<group>"; };
+		C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "Submodules/SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DA119819AD48E900855700 /* libSVGKit-iOS.1.2.0.a in Frameworks */,
 				C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */,
 				C98C7BB019A67951008D1650 /* Parse.framework in Frameworks */,
 				C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */,
@@ -202,6 +214,7 @@
 		C94578A419A4715100073562 /* StudentApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9DA118D19AD482B00855700 /* Images.svg */,
 				C90C320919ABF1B5003382C9 /* Extensions */,
 				C908153419AAD4C2001890A8 /* Models */,
 				C976ADB819A56EA600436917 /* Utils */,
@@ -311,6 +324,7 @@
 		C98C7BC719A67E16008D1650 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */,
 				C908152F19AA64DA001890A8 /* SwiftyJSON.swift */,
 				C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */,
 			);
@@ -322,6 +336,22 @@
 			children = (
 				C98C7BCE19A67E22008D1650 /* OAuth2Client.framework */,
 				C98C7BD019A67E22008D1650 /* libOAuth2Client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9DA118D19AD482B00855700 /* Images.svg */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA118E19AD482B00855700 /* codepath.svg */,
+			);
+			path = Images.svg;
+			sourceTree = "<group>";
+		};
+		C9DA119319AD48C900855700 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA119719AD48CA00855700 /* libSVGKit-iOS.1.2.0.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,6 +428,10 @@
 					ProductGroup = C98C7BC919A67E22008D1650 /* Products */;
 					ProjectRef = C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */;
 				},
+				{
+					ProductGroup = C9DA119319AD48C900855700 /* Products */;
+					ProjectRef = C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -422,6 +456,13 @@
 			remoteRef = C98C7BCF19A67E22008D1650 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C9DA119719AD48CA00855700 /* libSVGKit-iOS.1.2.0.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSVGKit-iOS.1.2.0.a";
+			remoteRef = C9DA119619AD48CA00855700 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -432,6 +473,7 @@
 				C94578AD19A4715100073562 /* Main.storyboard in Resources */,
 				C945790A19A5337800073562 /* Credentials.plist in Resources */,
 				C94578AF19A4715100073562 /* Images.xcassets in Resources */,
+				C9DA118F19AD482B00855700 /* codepath.svg in Resources */,
 				3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +583,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Submodules/OAuth2Client/Sources/**",
+					"$(SRCROOT)/Submodules/SwiftyJSON/SwiftyJSON/**",
+					"$(SRCROOT)/Submodules/SVGKit/Source/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -577,6 +626,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Submodules/OAuth2Client/Sources/**",
+					"$(SRCROOT)/Submodules/SwiftyJSON/SwiftyJSON/**",
+					"$(SRCROOT)/Submodules/SVGKit/Source/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -594,12 +650,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					"$(SRCROOT)/Submodules/OAuth2Client/Sources/**",
-					"$(SRCROOT)/Submodules/SwiftyJSON/SwiftyJSON/**",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -622,12 +673,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-					"$(SRCROOT)/Submodules/OAuth2Client/Sources/**",
-					"$(SRCROOT)/Submodules/SwiftyJSON/SwiftyJSON/**",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StudentApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

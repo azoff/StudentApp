@@ -3,5 +3,6 @@
 //
 
 #import "NXOAuth2.h"
+#import "SVGKit.h"
 #import <Parse/Parse.h>
 #import <Parse/PFObject+Subclass.h>

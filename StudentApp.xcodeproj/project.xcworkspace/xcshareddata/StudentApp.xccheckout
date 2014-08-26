@@ -18,6 +18,8 @@
 		<string>github.com:azoff/StudentApp.git</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
 		<string>github.com:azoff/SwiftyJSON.git</string>
+		<key>D4FB4285E84F344A4A0DD36243C06E37C26A184E</key>
+		<string>https://github.com/azoff/SVGKit.git</string>
 		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
 		<string>github.com:azoff/OAuth2Client.git</string>
 	</dict>
@@ -33,6 +35,8 @@
 		<string>../..</string>
 		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
 		<string>../../Submodules/SwiftyJSON</string>
+		<key>D4FB4285E84F344A4A0DD36243C06E37C26A184E</key>
+		<string>../../Submodules/SVGKit/</string>
 		<key>EB5674475998A0DD33CD59076628ED3B93CBE9CA</key>
 		<string>../../Submodules/OAuth2Client</string>
 	</dict>
@@ -75,6 +79,14 @@
 			<string>2045D86BC5D391C299DCC498309E722E037BFF4E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>StudentAppOauth2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D4FB4285E84F344A4A0DD36243C06E37C26A184E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SVGKit</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
