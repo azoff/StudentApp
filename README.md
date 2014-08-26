@@ -14,6 +14,7 @@ This project has the following directory structure:
 - __/StudentApp__ The main source code folder for the app
 - __/StudentAppTests__ Tests for the app, coming soon
 - __/Submodules__ Third-party repositories of swift or objC code
+- __/Travis__ Scripts [for continuous integration testing][14]
 
 Running the App
 -----------------
@@ -33,8 +34,8 @@ Contributing follows a standard github workflow:
 - Implement the feature, or fix the bug
   + Make sure to stick with the [standard conventions][11]
 - After you're all done working, rebase the branch into a single deliverable
-  + If you're uncomfortable with this, just move to the next step and I'll do it. It'll just help your patch to go in 
-    quicker.
+  + If you're uncomfortable with this, just move to the next step and I'll do it. It'll just help your patch to get in 
+    quickly.
   + The philosophy is outlined [in this great walkthrough][8]
 - Now push your rebased branch to github
   + You may push to the official repo, or you may fork your own
@@ -77,4 +78,5 @@ tracker][7], and I'll get to it as soon as I can.
 [10]:https://help.github.com/articles/using-pull-requests
 [11]:https://github.com/azoff/StudentApp#conventions
 [12]:https://help.github.com/articles/closing-issues-via-commit-messages
-[13]:[StudentApp/StudentApp.xcodeproj]
+[13]:StudentApp/StudentApp.xcodeproj
+[14]:http://blog.thepete.net/blog/2013/05/07/using-travis-ci-and-xctool-to-build-and-test-ios/
