@@ -16,6 +16,7 @@
 		C90C321519AC19AD003382C9 /* Model+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321419AC19AD003382C9 /* Model+json.swift */; };
 		C90C321719AC687E003382C9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321619AC687E003382C9 /* Error.swift */; };
 		C90C321919AC82C5003382C9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321819AC82C5003382C9 /* Logger.swift */; };
+		C90C321B19ACFAD2003382C9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321A19ACFAD2003382C9 /* Location.swift */; };
 		C94578A819A4715100073562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A719A4715100073562 /* AppDelegate.swift */; };
 		C94578AA19A4715100073562 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A919A4715100073562 /* LoginController.swift */; };
 		C94578AD19A4715100073562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94578AB19A4715100073562 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		C90C321419AC19AD003382C9 /* Model+json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+json.swift"; sourceTree = "<group>"; };
 		C90C321619AC687E003382C9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		C90C321819AC82C5003382C9 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		C90C321A19ACFAD2003382C9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C94578A219A4715100073562 /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94578A619A4715100073562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C94578A719A4715100073562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
@@ -144,6 +146,7 @@
 			children = (
 				C908153519AAD55F001890A8 /* Model.swift */,
 				C908153719AAEBDA001890A8 /* User.swift */,
+				C90C321A19ACFAD2003382C9 /* Location.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
 				C945790C19A534E100073562 /* Credentials.swift in Sources */,
 				C90C321919AC82C5003382C9 /* Logger.swift in Sources */,
+				C90C321B19ACFAD2003382C9 /* Location.swift in Sources */,
 				C908153619AAD55F001890A8 /* Model.swift in Sources */,
 				C94578A819A4715100073562 /* AppDelegate.swift in Sources */,
 				C90C320B19ABF1C8003382C9 /* JSONValue+any.swift in Sources */,

@@ -26,11 +26,21 @@ class User : Model, PFSubclassing {
     }
 
     var alias : String? {
-        return self["alias"] as? String
+        get {
+            return self["alias"] as? String
+        }
+        set {
+            self["alias"] = newValue
+        }
     }
 
     var name : String? {
-        return self["name"] as? String
+        get {
+            return self["name"] as? String
+        }
+        set {
+            self["name"] = newValue
+        }
     }
 
     var firstName : String? {
@@ -50,12 +60,22 @@ class User : Model, PFSubclassing {
     }
 
     var email : String? {
-        return self["email"] as? String
+        get {
+            return self["email"] as? String
+        }
+        set {
+            self["email"] = newValue
+        }
     }
 
 
     var githubId : Int? {
-        return self["githubId"] as? Int
+        get {
+            return self["githubId"] as? Int
+        }
+        set {
+            self["githubId"] = newValue
+        }
     }
 
     private struct CurrentUser {
