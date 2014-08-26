@@ -9,15 +9,21 @@
 import Foundation
 
 class ParseApp {
+
+    let logger = Logger("ParseApp")
     
     init() {
         registerSubclasses()
         if let dict = Credentials.dict("Parse") {
+
             let appId = dict["application_id"] as String!
             let clientKey = dict["client_key"] as String!
             Parse.setApplicationId(appId, clientKey:clientKey);
+
         } else {
-            fatalError("init(): missing parse settings")
+
+            logger.fatal("init()", "missing or invalid parse settings")
+
         }
     }
 

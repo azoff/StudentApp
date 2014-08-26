@@ -9,6 +9,8 @@
 import Foundation
 
 class User : Model, PFSubclassing {
+
+    let logger = Logger("User")
     
     class func parseClassName() -> String? {
         return "User"
@@ -77,7 +79,7 @@ class User : Model, PFSubclassing {
         let tryGithub : () -> Void = {
             if Github.singleton.isAuthorized {
 
-                Github.singleton.user {
+                Github.singleton.user({
                     let user = $0
                     user.saveInBackgroundWithBlock { (_, error) in
                         if let error = error {
@@ -90,7 +92,7 @@ class User : Model, PFSubclassing {
                             success?(user)
                         }
                     }
-                }
+                }, failure)
 
             } else {
 
@@ -104,7 +106,7 @@ class User : Model, PFSubclassing {
 
             User(objectId:id).fetchInBackgroundWithBlock { (user, error) in
                 if let error = error {
-                    // TODO: log...
+                    Logger("User").error("current(success:failure:)", error)
                     tryGithub()
                 } else if let user = user as? User {
                     CurrentUser.instance = user

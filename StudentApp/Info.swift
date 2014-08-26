@@ -10,7 +10,6 @@ import Foundation
 
 class Info : Plist {
     
-    
     class var appScheme : String {
         let types = singleton["CFBundleURLTypes"] as NSArray
         let type = types[0] as NSDictionary

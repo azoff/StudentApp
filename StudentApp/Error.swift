@@ -18,4 +18,8 @@ class Error : NSError {
         super.init(coder:aDecoder)
     }
 
+    func log() {
+        Logger(self.domain).error("\(self.code)", self)
+    }
+
 }

@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class Github  {
-    
+
+    private let logger = Logger("Github")
     private let accountType = "Github"
     private let oauth : NXOAuth2AccountStore // TODO: should be private...
     private var _account : NXOAuth2Account?
@@ -49,8 +50,11 @@ class Github  {
             self.syncKeychain()
 
         } else {
-            fatalError("init(): missing github settings")
+
+            logger.fatal("init()", "missing or invalid github settings")
+            fatalError("FIXME")
         }
+
     }
 
     var account : NXOAuth2Account? {
@@ -79,11 +83,6 @@ class Github  {
     }
 
     func user(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
-        // TODO: take this out when you get internet back!
-        if let fn = success {
-            fn(User.object(JSONValue(["login": "azoff", "id": 12345, "name": "Jonathan Azoff", "email": "jon@azoffdesign.com"])))
-            return
-        }
         NXOAuth2Request.performMethod("GET",
             onResource: NSURL.URLWithString("https://api.github.com/user"),
             usingParameters: nil,
@@ -91,9 +90,13 @@ class Github  {
             sendProgressHandler: nil, // TODO: add a progress handler
             responseHandler: { (_, data : NSData?, error : NSError?) in
                 if let error = error {
-                    if let fn = failure { fn(error) }
+                    failure?(error)
                 } else if let data = data {
-                    if let fn = success { fn(User.object(data)) }
+                    if let user = User.object(data) {
+                        success?(user)
+                    } else {
+                        failure?(Error("Unable to parse network data", domain:"GithubDomain"))
+                    }
                 }
             });
     }

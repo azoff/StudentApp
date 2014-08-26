@@ -9,7 +9,7 @@
 import Foundation
 
 extension Model {
-    
+
     class func jsonMappings() -> Dictionary<String, String>? {
         return nil
     }
@@ -24,13 +24,14 @@ extension Model {
         return obj
     }
 
-    class func object(data:NSData) -> Self {
+    class func object(data:NSData) -> Self? {
         var error : NSError?
         if let obj : AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) {
             return object(JSONValue(obj))
-        } else {
-            fatalError("Unable to decode JSON")
+        } else if let error = error {
+            Logger("User").error("object(data:)", error)
         }
+        return nil
     }
 
 }
