@@ -38,7 +38,8 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <segue destination="Apq-oE-NEM" kind="show" identifier="login_home" id="WUQ-WE-ywl"/>
+                        <outlet property="view" destination="kh9-bI-dsS" id="Q3N-J1-Lso"/>
+                        <segue destination="Apq-oE-NEM" kind="modal" identifier="login_home" id="WUQ-WE-ywl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -69,6 +70,7 @@
                             <constraint firstAttribute="centerX" secondItem="MLj-Mw-C4j" secondAttribute="centerX" id="AAl-bd-i7D"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EqX-Pb-H66"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
                         <size key="portraitSize" width="320" height="568"/>

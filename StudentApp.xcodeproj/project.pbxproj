@@ -324,8 +324,8 @@
 		C98C7BC719A67E16008D1650 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */,
 				C908152F19AA64DA001890A8 /* SwiftyJSON.swift */,
+				C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */,
 				C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */,
 			);
 			name = Submodules;
