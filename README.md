@@ -1,6 +1,8 @@
 Codepath Student App (iOS)
 ==========================
 
+[![Build Status](https://travis-ci.org/azoff/StudentApp.svg)][15]
+
 This is the codebase for the Codepath Student App. The application is mostly composed of [swift][1] code, making the
 codebase *very* expirimental. As a result, this app will be rejected from the app store until iOS8 ships. All imports
 and libraries are coded manually, mainly as a side-effect of the nacency of swift.
@@ -80,3 +82,4 @@ tracker][7], and I'll get to it as soon as I can.
 [12]:https://help.github.com/articles/closing-issues-via-commit-messages
 [13]:StudentApp/StudentApp.xcodeproj
 [14]:http://blog.thepete.net/blog/2013/05/07/using-travis-ci-and-xctool-to-build-and-test-ios/
+[15]:https://travis-ci.org/azoff/StudentApp
