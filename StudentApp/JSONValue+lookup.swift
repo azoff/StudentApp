@@ -10,19 +10,19 @@ import Foundation
 
 extension JSONValue {
 
-    func lookup(path:String) -> JSONValue {
-        let path = split(path) { $0 == "." }
-        return lookup(path)
-    }
+	func lookup(path:String) -> JSONValue {
+		let path = split(path) { $0 == "." }
+		return lookup(path)
+	}
 
-    func lookup(path:[String]) -> JSONValue {
-        let first : String = path[0]
-        if path.count > 1 {
-            let rest : [String] = Array(path[1...path.count])
-            return lookup(rest)
-        } else {
-            return self[first]
-        }
-    }
+	func lookup(path:[String]) -> JSONValue {
+		let first : String = path[0]
+		if path.count > 1 {
+			let rest : [String] = Array(path[1...path.count])
+			return lookup(rest)
+		} else {
+			return self[first]
+		}
+	}
 
 }

@@ -9,10 +9,10 @@
 import Foundation
 
 class Credentials : Plist {
-    override class var singleton : Credentials {
-        struct Static {
-            static let instance = Credentials(name: "Credentials")
-        }
-        return Static.instance
-    }
+	override class var singleton : Credentials {
+		struct Static {
+			static let instance = Credentials(name: "Credentials")
+		}
+		return Static.instance
+	}
 }

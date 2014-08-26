@@ -10,19 +10,19 @@ import Foundation
 
 extension JSONValue {
 
-    var any : AnyObject? {
-        switch self {
-        case .JNull:
-            return nil
-        case .JBool(let value):
-            return value
-        case .JString(let value):
-            return value
-        case .JNumber(let value):
-            return value
-        default:
-            return self.description
-        }
-    }
+	var any : AnyObject? {
+		switch self {
+		case .JNull:
+			return nil
+		case .JBool(let value):
+			return value
+		case .JString(let value):
+			return value
+		case .JNumber(let value):
+			return value
+		default:
+			return self.description
+		}
+	}
 
 }

@@ -11,113 +11,113 @@ import UIKit
 
 class Github  {
 
-    private let logger = Logger("Github")
-    private let accountType = "Github"
-    private let oauth : NXOAuth2AccountStore // TODO: should be private...
-    private var _account : NXOAuth2Account?
-    var onAuthorize, onDeauthorize : (() -> Void)?
-    var onError : ((NSError) -> Void)?
+	private let logger = Logger("Github")
+	private let accountType = "Github"
+	private let oauth : NXOAuth2AccountStore // TODO: should be private...
+	private var _account : NXOAuth2Account?
+	var onAuthorize, onDeauthorize : (() -> Void)?
+	var onError : ((NSError) -> Void)?
 
 
-    init() {
+	init() {
 
-        if let dict = Credentials.dict(accountType) {
+		if let dict = Credentials.dict(accountType) {
 
-            oauth = NXOAuth2AccountStore.sharedStore() as NXOAuth2AccountStore
+			oauth = NXOAuth2AccountStore.sharedStore() as NXOAuth2AccountStore
 
-            let config = NSMutableDictionary()
-            config[kNXOAuth2AccountStoreConfigurationClientID] = dict["client_id"]!
-            config[kNXOAuth2AccountStoreConfigurationSecret] = dict["client_secret"]!
-            config[kNXOAuth2AccountStoreConfigurationAuthorizeURL] = NSURL.URLWithString(dict["authorize_uri"]!)
-            config[kNXOAuth2AccountStoreConfigurationTokenURL] = NSURL.URLWithString(dict["token_uri"]!)
-            config[kNXOAuth2AccountStoreConfigurationRedirectURL] = NSURL.URLWithString(dict["redirect_uri"]!)
-            oauth.setConfiguration(config, forAccountType:accountType)
+			let config = NSMutableDictionary()
+			config[kNXOAuth2AccountStoreConfigurationClientID] = dict["client_id"]!
+			config[kNXOAuth2AccountStoreConfigurationSecret] = dict["client_secret"]!
+			config[kNXOAuth2AccountStoreConfigurationAuthorizeURL] = NSURL.URLWithString(dict["authorize_uri"]!)
+			config[kNXOAuth2AccountStoreConfigurationTokenURL] = NSURL.URLWithString(dict["token_uri"]!)
+			config[kNXOAuth2AccountStoreConfigurationRedirectURL] = NSURL.URLWithString(dict["redirect_uri"]!)
+			oauth.setConfiguration(config, forAccountType:accountType)
 
-            let notifs = NSNotificationCenter.defaultCenter()
-            let successEvent = NXOAuth2AccountStoreAccountsDidChangeNotification
-            notifs.addObserverForName(successEvent, object: self.oauth, queue: nil) {
-                self.account = $0.userInfo?[NXOAuth2AccountStoreNewAccountUserInfoKey] as? NXOAuth2Account
-            }
+			let notifs = NSNotificationCenter.defaultCenter()
+			let successEvent = NXOAuth2AccountStoreAccountsDidChangeNotification
+			notifs.addObserverForName(successEvent, object: self.oauth, queue: nil) {
+				self.account = $0.userInfo?[NXOAuth2AccountStoreNewAccountUserInfoKey] as? NXOAuth2Account
+			}
 
-            let failureEvent = NXOAuth2AccountStoreDidFailToRequestAccessNotification
-            notifs.addObserverForName(failureEvent, object: self.oauth, queue: nil, usingBlock: {
-                let err : AnyObject? = $0.userInfo![NXOAuth2AccountStoreErrorKey]
-                if let err = err as? NSError {
-                    self.onError?(err)
-                }
-            })
+			let failureEvent = NXOAuth2AccountStoreDidFailToRequestAccessNotification
+			notifs.addObserverForName(failureEvent, object: self.oauth, queue: nil, usingBlock: {
+				let err : AnyObject? = $0.userInfo![NXOAuth2AccountStoreErrorKey]
+				if let err = err as? NSError {
+					self.onError?(err)
+				}
+			})
 
-            self.syncKeychain()
+			self.syncKeychain()
 
-        } else {
+		} else {
 
-            logger.fatal("init()", "missing or invalid github settings")
-            fatalError("FIXME")
-        }
+			logger.fatal("init()", "missing or invalid github settings")
+			fatalError("FIXME")
+		}
 
-    }
+	}
 
-    var account : NXOAuth2Account? {
-        didSet {
-            if account != nil {
-                logger.info("account", "OAuth Account Authorized: \(account!.identifier)")
-                self.onAuthorize?()
-            } else {
-                logger.info("account", "OAuth Account Deauthorized...")
-                self.onDeauthorize?()
-            }
-        }
-    }
+	var account : NXOAuth2Account? {
+		didSet {
+			if account != nil {
+				logger.info("account", "OAuth Account Authorized: \(account!.identifier)")
+				self.onAuthorize?()
+			} else {
+				logger.info("account", "OAuth Account Deauthorized...")
+				self.onDeauthorize?()
+			}
+		}
+	}
 
-    func authorize() {
-        logger.info("authorize()", "Authorizing with github...")
-        oauth.requestAccessToAccountWithType(accountType)
-    }
+	func authorize() {
+		logger.info("authorize()", "Authorizing with github...")
+		oauth.requestAccessToAccountWithType(accountType)
+	}
 
-    var isAuthorized : Bool {
-        return account != nil
-    }
+	var isAuthorized : Bool {
+		return account != nil
+	}
 
-    private func syncKeychain() {
-        for obj in oauth.accountsWithAccountType(accountType) {
-            self.account = obj as? NXOAuth2Account
-            break
-        }
-    }
+	private func syncKeychain() {
+		for obj in oauth.accountsWithAccountType(accountType) {
+			self.account = obj as? NXOAuth2Account
+			break
+		}
+	}
 
-    func user(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
-        NXOAuth2Request.performMethod("GET",
-            onResource: NSURL.URLWithString("https://api.github.com/user"),
-            usingParameters: nil,
-            withAccount: self.account?,
-            sendProgressHandler: nil, // TODO: add a progress handler
-            responseHandler: { (_, data : NSData?, error : NSError?) in
-                if let error = error {
-                    self.logger.error("user(success:failure:)", error)
-                    failure?(error)
-                } else if let data = data {
-                    if let user = User.object(data) {
-                        self.logger.info("user(success:failure:)", "Found user \(user.alias!)!")
-                        success?(user)
-                        return
-                    }
-                }
-                let error = Error("Unable to parse network data", domain:"GithubDomain")
-                self.logger.error("user(success:failure:)", error)
-                failure?(error)
-            });
-    }
+	func user(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
+		NXOAuth2Request.performMethod("GET",
+			onResource: NSURL.URLWithString("https://api.github.com/user"),
+			usingParameters: nil,
+			withAccount: self.account?,
+			sendProgressHandler: nil, // TODO: add a progress handler
+			responseHandler: { (_, data : NSData?, error : NSError?) in
+				if let error = error {
+					self.logger.error("user(success:failure:)", error)
+					failure?(error)
+				} else if let data = data {
+					if let user = User.object(data) {
+						self.logger.info("user(success:failure:)", "Found user \(user.alias!)!")
+						success?(user)
+						return
+					}
+				}
+				let error = Error("Unable to parse network data", domain:"GithubDomain")
+				self.logger.error("user(success:failure:)", error)
+				failure?(error)
+			});
+	}
 
-    func handleRedirectURL(url : NSURL) -> Bool {
-        logger.info("handleRedirectURL(url:)", "Callback received, \(url)")
-        return oauth.handleRedirectURL(url)
-    }
+	func handleRedirectURL(url : NSURL) -> Bool {
+		logger.info("handleRedirectURL(url:)", "Callback received, \(url)")
+		return oauth.handleRedirectURL(url)
+	}
 
-    class var singleton : Github {
-        struct Static {
-            static let instance = Github()
-        }
-        return Static.instance
-    }
-    
+	class var singleton : Github {
+		struct Static {
+			static let instance = Github()
+		}
+		return Static.instance
+	}
+
 }

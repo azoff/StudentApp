@@ -10,9 +10,9 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = Theme.Color.ViewControllerBackground
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		view.backgroundColor = Theme.Color.ViewControllerBackground
+	}
 
 }

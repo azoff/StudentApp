@@ -10,34 +10,34 @@ import UIKit
 
 class LoginController: BaseViewController {
 
-    private let logger = Logger("LoginController")
+	private let logger = Logger("LoginController")
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        Github.singleton.onAuthorize = segueToHomeController
-        Github.singleton.onError = onLoginError
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		Github.singleton.onAuthorize = segueToHomeController
+		Github.singleton.onError = onLoginError
+	}
 
-    override func viewDidAppear(animated:Bool) {
-        super.viewDidAppear(animated)
-        if Github.singleton.isAuthorized {
-            segueToHomeController()
-        }
-    }
+	override func viewDidAppear(animated:Bool) {
+		super.viewDidAppear(animated)
+		if Github.singleton.isAuthorized {
+			segueToHomeController()
+		}
+	}
 
-    private func onLoginError(error:NSError) {
-        self.logger.error("onLoginError()", error)
-    }
+	private func onLoginError(error:NSError) {
+		self.logger.error("onLoginError()", error)
+	}
 
-    private func segueToHomeController() {
-        logger.info("segueToHomeController()", "Segue to home controller...")
-        performSegueWithIdentifier("login_home", sender: self)
-    }
+	private func segueToHomeController() {
+		logger.info("segueToHomeController()", "Segue to home controller...")
+		performSegueWithIdentifier("login_home", sender: self)
+	}
 
-    @IBAction func onLoginButton() {
-        logger.info("onLoginButton()", "Login button tapped!")
-        Github.singleton.authorize()
-    }
+	@IBAction func onLoginButton() {
+		logger.info("onLoginButton()", "Login button tapped!")
+		Github.singleton.authorize()
+	}
 
 }
 

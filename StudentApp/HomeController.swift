@@ -10,17 +10,17 @@ import UIKit
 
 class HomeController: BaseViewController {
 
-    @IBOutlet weak var label: UILabel!
+	@IBOutlet weak var label: UILabel!
 
-    private let logger = Logger("HomeController")
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        User.current(success: {
-            self.label.text = "Hello \($0.firstName!)!"
-        }, failure: {
-            self.logger.error("failure()", $0)
-        })
-    }
+	private let logger = Logger("HomeController")
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		User.current(success: {
+			self.label.text = "Hello \($0.firstName!)!"
+		}, failure: {
+			self.logger.error("failure()", $0)
+		})
+	}
 
 }

@@ -9,19 +9,19 @@
 import Foundation
 
 class Info : Plist {
-    
-    class var appScheme : String {
-        let types = singleton["CFBundleURLTypes"] as NSArray
-        let type = types[0] as NSDictionary
-        let schemes = type.valueForKey("CFBundleURLSchemes") as NSArray
-        return schemes[0] as String
-    }
-    
-    override class var singleton : Info {
-        struct Static {
-            static let instance = Info(name: "Info")
-        }
-        return Static.instance
-    }
+
+	class var appScheme : String {
+		let types = singleton["CFBundleURLTypes"] as NSArray
+		let type = types[0] as NSDictionary
+		let schemes = type.valueForKey("CFBundleURLSchemes") as NSArray
+		return schemes[0] as String
+	}
+
+	override class var singleton : Info {
+		struct Static {
+			static let instance = Info(name: "Info")
+		}
+		return Static.instance
+	}
 
 }

@@ -10,44 +10,44 @@ import Foundation
 
 class Loction : Model, PFSubclassing {
 
-    class func parseClassName() -> String? {
-        return "Location"
-    }
+	class func parseClassName() -> String? {
+		return "Location"
+	}
 
-    var name : String? {
-        get {
-            return self["name"] as? String
-        }
-        set {
-            self["name"] = newValue
-        }
-    }
+	var name : String? {
+		get {
+			return self["name"] as? String
+		}
+		set {
+			self["name"] = newValue
+		}
+	}
 
-    var address : String? {
-        get {
-            return self["address"] as? String
-        }
-        set {
-            self["address"] = newValue
-        }
-    }
+	var address : String? {
+		get {
+			return self["address"] as? String
+		}
+		set {
+			self["address"] = newValue
+		}
+	}
 
-    var geo : PFGeoPoint? {
-        get {
-            return self["geo"] as? PFGeoPoint
-        }
-        set {
-            self["geo"] = geo
-        }
-    }
+	var geo : PFGeoPoint? {
+		get {
+			return self["geo"] as? PFGeoPoint
+		}
+		set {
+			self["geo"] = geo
+		}
+	}
 
-    var radius : Int? {
-        get {
-            return self["radius"] as? Int
-        }
-        set {
-            self["radius"] = radius
-        }
-    }
+	var radius : Int? {
+		get {
+			return self["radius"] as? Int
+		}
+		set {
+			self["radius"] = radius
+		}
+	}
 
 }
