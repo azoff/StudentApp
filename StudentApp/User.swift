@@ -51,4 +51,65 @@ class User : Model, PFSubclassing {
         return self["email"] as? String
     }
 
+    private struct CurrentUser {
+        static var instance : User?
+        static let key = "codepath.StudentApp.CurrentUserKey"
+    }
+
+    class func withCurrentUser(callback:(User?) -> Void) {
+
+        // first try to get the user from the instance cache
+        if let user = CurrentUser.instance {
+            callback(user)
+            return
+        }
+
+        // write-through instance cache
+        let done : (PFObject?, NSError?) -> Void = { (obj, _) in
+            if let obj = obj {
+                CurrentUser.instance = User(object:obj)
+            } else {
+                CurrentUser.instance = nil
+            }
+            callback(CurrentUser.instance)
+        }
+
+        // then try to get the user from NSUserDefaults
+        let defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if let id = defaults.stringForKey(CurrentUser.key) {
+            User(objectId:id).fetchIfNeededInBackgroundWithBlock(done)
+            return
+        }
+
+        // finally, try to get the user from github
+        if Github.singleton.isAuthorized {
+            Github.singleton.user {
+                defaults.setObject($0.objectId, forKey:CurrentUser.key) // write through NSUserDefaults
+                defaults.synchronize()
+                $0.fetchIfNeededInBackgroundWithBlock(done)
+            }
+        } else {
+            callback(nil)
+        }
+
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -68,7 +68,7 @@
 /* Begin PBXFileReference section */
 		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153519AAD55F001890A8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
-		C908153719AAEBDA001890A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C908153719AAEBDA001890A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONValue+lookup.swift"; sourceTree = "<group>"; };
 		C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONValue+any.swift"; sourceTree = "<group>"; };
 		C90C321419AC19AD003382C9 /* Model+json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+json.swift"; sourceTree = "<group>"; };
