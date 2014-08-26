@@ -68,6 +68,12 @@ coding in [AppCode 3][6], and using XCode only when I need to. It's not perfect,
 alternative. If you're having a similar issue, or any other issue for that matter, just add a ticket on [the official
 tracker][7], and I'll get to it as soon as I can.
 
+Helpful Links
+-------------
+- 
+- [Swift Language Guide][16]
+- [NSHipster][17]
+
 [1]:http://swift-lang.org/main/
 [2]:https://parse.com/
 [3]:https://developer.apple.com/xcode/downloads/
@@ -83,3 +89,5 @@ tracker][7], and I'll get to it as soon as I can.
 [13]:StudentApp/StudentApp.xcodeproj
 [14]:http://blog.thepete.net/blog/2013/05/07/using-travis-ci-and-xctool-to-build-and-test-ios/
 [15]:https://travis-ci.org/azoff/StudentApp
+[16]:https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
+[17]:http://nshipster.com/
