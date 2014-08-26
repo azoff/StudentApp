@@ -20,25 +20,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentApp/Model+json.swift"
-            timestampString = "430709707.445988"
+            timestampString = "430730861.557194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
-            endingLineNumber = "30">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StudentApp/User.swift"
-            timestampString = "430726775.818989"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87">
+            endingLineNumber = "30"
+            landmarkName = "object(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

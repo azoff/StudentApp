@@ -32,4 +32,5 @@ extension Model {
             fatalError("Unable to decode JSON")
         }
     }
+
 }

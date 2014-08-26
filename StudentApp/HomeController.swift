@@ -15,7 +15,7 @@ class HomeController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         User.current {
-            self.label.text = "Hello \($0!.firstName!)!"
+            self.label.text = "Hello \($0.firstName!)!"
         }
     }
 

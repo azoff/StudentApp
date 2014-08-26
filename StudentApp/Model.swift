@@ -27,16 +27,4 @@ class Model : PFObject {
         }
     }
 
-    // PFSubclassing
-
-    override var objectId : String? {
-        get {
-            let id : AnyObject = self["objectId"]
-            return "\(id)"
-        }
-        set {
-            self["objectId"] = newValue
-        }
-    }
-
 }

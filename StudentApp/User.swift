@@ -17,7 +17,7 @@ class User : Model, PFSubclassing {
     override class func jsonMappings() -> Dictionary<String, String>? {
         return [
             "alias": "login",
-            "objectId": "id",
+            "githubId": "id",
             "name": "name",
             "email": "email"
         ]
@@ -51,45 +51,72 @@ class User : Model, PFSubclassing {
         return self["email"] as? String
     }
 
+
+    var githubId : Int? {
+        return self["githubId"] as? Int
+    }
+
     private struct CurrentUser {
         static var instance : User?
         static let key = "codepath.StudentApp.CurrentUserKey"
     }
 
-    class func current(callback:(User?) -> Void) {
+    class func current(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
 
-        // first try to get the user from the instance cache
+        // first, try to get the user from the instance cache
         if let user = CurrentUser.instance {
-            callback(user)
+            success?(user)
             return
         }
 
-        // write-through instance cache
-        let done : (PFObject?, NSError?) -> Void = { (obj, _) in
-            if let obj = obj {
-                CurrentUser.instance = User(object:obj)
-            } else {
-                CurrentUser.instance = nil
-            }
-            callback(CurrentUser.instance)
-        }
-
-        // then try to get the user from NSUserDefaults
+        // we can store the current user ID in user defaults
         let defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        if let id = defaults.stringForKey(CurrentUser.key) {
-            User(objectId:id).fetchIfNeededInBackgroundWithBlock(done)
-            return
+
+        // there are two places where we try to get the user from github,
+        // so let's cache a closure to it here...
+        let tryGithub : () -> Void = {
+            if Github.singleton.isAuthorized {
+
+                Github.singleton.user {
+                    let user = $0
+                    user.saveInBackgroundWithBlock { (_, error) in
+                        if let error = error {
+                            CurrentUser.instance = nil
+                            failure?(error)
+                        } else {
+                            defaults.setObject(CurrentUser.instance!.objectId, forKey:CurrentUser.key)
+                            defaults.synchronize()
+                            CurrentUser.instance = user
+                            success?(user)
+                        }
+                    }
+                }
+
+            } else {
+
+                failure?(Error("Unable to load current user from github"))
+
+            }
         }
 
-        // finally, try to get the user from github
-        if Github.singleton.isAuthorized {
-            Github.singleton.user {
-                defaults.setObject($0.objectId, forKey:CurrentUser.key) // write through NSUserDefaults
-                defaults.synchronize()
-                $0.fetchIfNeededInBackgroundWithBlock(done)
+        // now, try to get the user from NSUserDefaults
+        if let id = defaults.stringForKey(CurrentUser.key) {
+
+            User(objectId:id).fetchInBackgroundWithBlock { (user, error) in
+                if let error = error {
+                    // TODO: log...
+                    tryGithub()
+                } else if let user = user as? User {
+                    CurrentUser.instance = user
+                    success?(user)
+                } else {
+                    failure?(Error("Unexpected state when trying to load current user"))
+                }
             }
+
+        // finally, if that fails, try to get the user from github
         } else {
-            callback(nil)
+            tryGithub()
         }
 
     }

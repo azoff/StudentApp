@@ -14,6 +14,7 @@
 		C90C320819ABF01D003382C9 /* JSONValue+lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */; };
 		C90C320B19ABF1C8003382C9 /* JSONValue+any.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */; };
 		C90C321519AC19AD003382C9 /* Model+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321419AC19AD003382C9 /* Model+json.swift */; };
+		C90C321719AC687E003382C9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321619AC687E003382C9 /* Error.swift */; };
 		C94578A819A4715100073562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A719A4715100073562 /* AppDelegate.swift */; };
 		C94578AA19A4715100073562 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A919A4715100073562 /* LoginController.swift */; };
 		C94578AD19A4715100073562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94578AB19A4715100073562 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONValue+lookup.swift"; sourceTree = "<group>"; };
 		C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONValue+any.swift"; sourceTree = "<group>"; };
 		C90C321419AC19AD003382C9 /* Model+json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+json.swift"; sourceTree = "<group>"; };
+		C90C321619AC687E003382C9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		C94578A219A4715100073562 /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94578A619A4715100073562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C94578A719A4715100073562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C976ADB919A56EB800436917 /* Plist.swift */,
+				C90C321619AC687E003382C9 /* Error.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */,
 				C94578CA19A51EC900073562 /* Theme.swift in Sources */,
 				C976ADBA19A56EB800436917 /* Plist.swift in Sources */,
+				C90C321719AC687E003382C9 /* Error.swift in Sources */,
 				C976ADB419A565AB00436917 /* Github.swift in Sources */,
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
 				C945790C19A534E100073562 /* Credentials.swift in Sources */,
