@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1AFD6C5B70AC5F24592CC /* .gitignore */; };
 		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
 		C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
 		C908153619AAD55F001890A8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153519AAD55F001890A8 /* Model.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CD1AFD6C5B70AC5F24592CC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153519AAD55F001890A8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153719AAEBDA001890A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
@@ -169,6 +171,7 @@
 				C94578A419A4715100073562 /* StudentApp */,
 				C94578B719A4715200073562 /* StudentAppTests */,
 				C94578A319A4715100073562 /* Products */,
+				3CD1AFD6C5B70AC5F24592CC /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -414,6 +417,7 @@
 				C94578AD19A4715100073562 /* Main.storyboard in Resources */,
 				C945790A19A5337800073562 /* Credentials.plist in Resources */,
 				C94578AF19A4715100073562 /* Images.xcassets in Resources */,
+				3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
