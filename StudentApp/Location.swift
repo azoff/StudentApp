@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Loction : Model, PFSubclassing {
+class Location : Model, PFSubclassing {
 
 	class func parseClassName() -> String? {
 		return "Location"

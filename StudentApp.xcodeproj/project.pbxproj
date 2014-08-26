@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CD1A0D849E14D9FBE53B391 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1ACCAEAC7E64F735E7C08 /* Class.swift */; };
 		3CD1A177F0CF61BB5E8C62B6 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A7BC50B681262B191F4D /* Assignment.swift */; };
 		3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1AFD6C5B70AC5F24592CC /* .gitignore */; };
 		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		3CD1A7BC50B681262B191F4D /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		3CD1ACCAEAC7E64F735E7C08 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		3CD1AFD6C5B70AC5F24592CC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153519AAD55F001890A8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
@@ -152,6 +154,7 @@
 				C908153719AAEBDA001890A8 /* User.swift */,
 				C90C321A19ACFAD2003382C9 /* Location.swift */,
 				3CD1A7BC50B681262B191F4D /* Assignment.swift */,
+				3CD1ACCAEAC7E64F735E7C08 /* Class.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C90C320B19ABF1C8003382C9 /* JSONValue+any.swift in Sources */,
 				C976ADC419A57B6100436917 /* Info.swift in Sources */,
 				3CD1A177F0CF61BB5E8C62B6 /* Assignment.swift in Sources */,
+				3CD1A0D849E14D9FBE53B391 /* Class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
