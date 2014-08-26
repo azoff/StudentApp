@@ -8,16 +8,16 @@
 
 import Foundation
 
-class User : JSONModel {
+class User : Model, PFSubclassing {
     
-    override var className : String? {
-        return "user"
+    class func parseClassName() -> String? {
+        return "User"
     }
-    
-    override var mappings : Dictionary<String, String>? {
+
+    override class func jsonMappings() -> Dictionary<String, String>? {
         return [
             "alias": "login",
-            "ghid": "id",
+            "objectId": "id",
             "name": "name",
             "email": "email"
         ]
@@ -49,10 +49,6 @@ class User : JSONModel {
 
     var email : String? {
         return self["email"] as? String
-    }
-
-    var githubId : Int? {
-        return self["ghid"] as? Int
     }
 
 }

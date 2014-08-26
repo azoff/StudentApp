@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
 		C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
-		C908153619AAD55F001890A8 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153519AAD55F001890A8 /* JSONModel.swift */; };
+		C908153619AAD55F001890A8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153519AAD55F001890A8 /* Model.swift */; };
 		C908153819AAEBDA001890A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153719AAEBDA001890A8 /* User.swift */; };
+		C90C320819ABF01D003382C9 /* JSONValue+lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */; };
+		C90C320B19ABF1C8003382C9 /* JSONValue+any.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */; };
+		C90C321519AC19AD003382C9 /* Model+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90C321419AC19AD003382C9 /* Model+json.swift */; };
 		C94578A819A4715100073562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A719A4715100073562 /* AppDelegate.swift */; };
 		C94578AA19A4715100073562 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94578A919A4715100073562 /* LoginController.swift */; };
 		C94578AD19A4715100073562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94578AB19A4715100073562 /* Main.storyboard */; };
@@ -64,8 +67,11 @@
 
 /* Begin PBXFileReference section */
 		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
-		C908153519AAD55F001890A8 /* JSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		C908153519AAD55F001890A8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153719AAEBDA001890A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONValue+lookup.swift"; sourceTree = "<group>"; };
+		C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONValue+any.swift"; sourceTree = "<group>"; };
+		C90C321419AC19AD003382C9 /* Model+json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+json.swift"; sourceTree = "<group>"; };
 		C94578A219A4715100073562 /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94578A619A4715100073562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C94578A719A4715100073562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,10 +138,20 @@
 		C908153419AAD4C2001890A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C908153519AAD55F001890A8 /* JSONModel.swift */,
+				C908153519AAD55F001890A8 /* Model.swift */,
 				C908153719AAEBDA001890A8 /* User.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C90C320919ABF1B5003382C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */,
+				C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */,
+				C90C321419AC19AD003382C9 /* Model+json.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		C945789919A4715100073562 = {
@@ -161,6 +177,7 @@
 		C94578A419A4715100073562 /* StudentApp */ = {
 			isa = PBXGroup;
 			children = (
+				C90C320919ABF1B5003382C9 /* Extensions */,
 				C908153419AAD4C2001890A8 /* Models */,
 				C976ADB819A56EA600436917 /* Utils */,
 				C976ADB219A5657200436917 /* Networking */,
@@ -406,6 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C908153819AAEBDA001890A8 /* User.swift in Sources */,
+				C90C321519AC19AD003382C9 /* Model+json.swift in Sources */,
+				C90C320819ABF01D003382C9 /* JSONValue+lookup.swift in Sources */,
 				C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */,
 				C976ADC619A5B27100436917 /* HomeController.swift in Sources */,
 				C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */,
@@ -415,8 +434,9 @@
 				C976ADB419A565AB00436917 /* Github.swift in Sources */,
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
 				C945790C19A534E100073562 /* Credentials.swift in Sources */,
-				C908153619AAD55F001890A8 /* JSONModel.swift in Sources */,
+				C908153619AAD55F001890A8 /* Model.swift in Sources */,
 				C94578A819A4715100073562 /* AppDelegate.swift in Sources */,
+				C90C320B19ABF1C8003382C9 /* JSONValue+any.swift in Sources */,
 				C976ADC419A57B6100436917 /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

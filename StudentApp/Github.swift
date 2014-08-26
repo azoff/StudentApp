@@ -79,6 +79,11 @@ class Github  {
     }
 
     func user(success:((User) -> Void)? = nil, failure:((NSError) -> Void)? = nil) {
+        // TODO: take this out when you get internet back!
+        if let fn = success {
+            fn(User.object(JSONValue(["login": "azoff", "id": 12345, "name": "Jonathan Azoff", "email": "jon@azoffdesign.com"])))
+            return
+        }
         NXOAuth2Request.performMethod("GET",
             onResource: NSURL.URLWithString("https://api.github.com/user"),
             usingParameters: nil,
@@ -88,7 +93,7 @@ class Github  {
                 if let error = error {
                     if let fn = failure { fn(error) }
                 } else if let data = data {
-                    if let fn = success { fn(User(data)) }
+                    if let fn = success { fn(User.object(data)) }
                 }
             });
     }

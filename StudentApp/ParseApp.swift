@@ -11,6 +11,7 @@ import Foundation
 class ParseApp {
     
     init() {
+        registerSubclasses()
         if let dict = Credentials.dict("Parse") {
             let appId = dict["application_id"] as String!
             let clientKey = dict["client_key"] as String!
@@ -19,7 +20,11 @@ class ParseApp {
             fatalError("init(): missing parse settings")
         }
     }
-    
+
+    private func registerSubclasses() {
+        User.registerSubclass()
+    }
+
     func trackLaunch(launchOptions: NSDictionary!) -> Bool {
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         return true
