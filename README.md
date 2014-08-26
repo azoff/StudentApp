@@ -70,7 +70,7 @@ tracker][7], and I'll get to it as soon as I can.
 
 Helpful Links
 -------------
-- 
+- [WWDC Introduction To Swift][18]
 - [Swift Language Guide][16]
 - [NSHipster][17]
 
@@ -91,3 +91,4 @@ Helpful Links
 [15]:https://travis-ci.org/azoff/StudentApp
 [16]:https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
 [17]:http://nshipster.com/
+[18]:https://www.youtube.com/watch?v=A0C6L4XmrZM
