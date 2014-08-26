@@ -57,10 +57,9 @@ class Assignment : Model, PFSubclassing {
 		}
 	}
 
-	// TODO: this needs to be a week model
-	var week : PFObject? {
+	var parentWeek : Week? {
 		get {
-			return self["week"] as? PFObject
+			return self["week"] as? Week
 		}
 		set {
 			self["week"] = newValue
