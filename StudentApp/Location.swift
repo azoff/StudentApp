@@ -37,7 +37,7 @@ class Loction : Model, PFSubclassing {
 			return self["geo"] as? PFGeoPoint
 		}
 		set {
-			self["geo"] = geo
+			self["geo"] = newValue
 		}
 	}
 
@@ -46,7 +46,7 @@ class Loction : Model, PFSubclassing {
 			return self["radius"] as? Int
 		}
 		set {
-			self["radius"] = radius
+			self["radius"] = newValue
 		}
 	}
 
