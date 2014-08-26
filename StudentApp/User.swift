@@ -21,7 +21,8 @@ class User : Model, PFSubclassing {
 			"alias": "login",
 			"githubId": "id",
 			"name": "name",
-			"email": "email"
+			"email": "email",
+			"avatarUrl": "avatar_url"
 		]
 	}
 
@@ -68,13 +69,46 @@ class User : Model, PFSubclassing {
 		}
 	}
 
-
 	var githubId : Int? {
 		get {
 			return self["githubId"] as? Int
 		}
 		set {
 			self["githubId"] = newValue
+		}
+	}
+
+	var avatarURLString : String? {
+		get {
+			return self["avatarUrl"] as? String
+		}
+		set {
+			self["avatarUrl"] = newValue
+		}
+	}
+
+	var avatarURL : NSURL? {
+		if let string = avatarURLString {
+			return NSURL(string:string)
+		}
+		return nil
+	}
+
+	var parentClass : Class? {
+		get {
+			return self["class"] as? Class
+		}
+		set {
+			self["class"] = newValue
+		}
+	}
+
+	var parentGroup : Group? {
+		get {
+			return self["group"] as? Group
+		}
+		set {
+			self["group"] = newValue
 		}
 	}
 

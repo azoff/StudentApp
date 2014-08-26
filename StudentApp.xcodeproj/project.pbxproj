@@ -10,6 +10,7 @@
 		3CD1A0D849E14D9FBE53B391 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1ACCAEAC7E64F735E7C08 /* Class.swift */; };
 		3CD1A177F0CF61BB5E8C62B6 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A7BC50B681262B191F4D /* Assignment.swift */; };
 		3CD1A2EE3757FAD70F69D613 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A3B91A9F8304991E5A6C /* Week.swift */; };
+		3CD1A42BDA798AAD8A8E3C53 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A65698D54E121F58127E /* Group.swift */; };
 		3CD1AA16EFEA1648EEBCCEA5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1AF4308E9764D80EA261F /* Session.swift */; };
 		3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1AFD6C5B70AC5F24592CC /* .gitignore */; };
 		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		3CD1A3B91A9F8304991E5A6C /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		3CD1A65698D54E121F58127E /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		3CD1A7BC50B681262B191F4D /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		3CD1ACCAEAC7E64F735E7C08 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		3CD1AF4308E9764D80EA261F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				3CD1ACCAEAC7E64F735E7C08 /* Class.swift */,
 				3CD1A3B91A9F8304991E5A6C /* Week.swift */,
 				3CD1AF4308E9764D80EA261F /* Session.swift */,
+				3CD1A65698D54E121F58127E /* Group.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				3CD1A0D849E14D9FBE53B391 /* Class.swift in Sources */,
 				3CD1A2EE3757FAD70F69D613 /* Week.swift in Sources */,
 				3CD1AA16EFEA1648EEBCCEA5 /* Session.swift in Sources */,
+				3CD1A42BDA798AAD8A8E3C53 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
