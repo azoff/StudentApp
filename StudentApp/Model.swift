@@ -31,7 +31,8 @@ class Model : PFObject {
 
     override var objectId : String? {
         get {
-            return self["objectId"] as? String
+            let id : AnyObject = self["objectId"]
+            return "\(id)"
         }
         set {
             self["objectId"] = newValue

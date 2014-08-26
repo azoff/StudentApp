@@ -14,8 +14,8 @@ class HomeController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Github.singleton.user {
-            self.label.text = "Hello \($0.firstName!)!"
+        User.current {
+            self.label.text = "Hello \($0!.firstName!)!"
         }
     }
 

@@ -3,10 +3,19 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "StudentApp.JSONModel.init (StudentApp.JSONModel.Type)(json : StudentApp.JSONValue) -&gt; StudentApp.JSONModel:JSONModel.swift">
+      </ContextState>
+      <ContextState
          contextName = "StudentApp.Plist.subscript.getter (Swift.String) -&gt; Swift.AnyObject:Plist.swift">
       </ContextState>
       <ContextState
+         contextName = "StudentApp.Model.init (StudentApp.Model.Type)(data : ObjectiveC.NSData) -&gt; StudentApp.Model:Model+json.swift">
+      </ContextState>
+      <ContextState
          contextName = "StudentApp.Info.callbackUrl.getter : Swift.String:Info.swift">
+      </ContextState>
+      <ContextState
+         contextName = "StudentApp.User.(current (StudentApp.User.Type) -&gt; ((Swift.Optional&lt;StudentApp.User&gt;) -&gt; ()) -&gt; ()).(closure #2):User.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

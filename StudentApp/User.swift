@@ -56,7 +56,7 @@ class User : Model, PFSubclassing {
         static let key = "codepath.StudentApp.CurrentUserKey"
     }
 
-    class func withCurrentUser(callback:(User?) -> Void) {
+    class func current(callback:(User?) -> Void) {
 
         // first try to get the user from the instance cache
         if let user = CurrentUser.instance {
