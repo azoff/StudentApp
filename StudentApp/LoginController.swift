@@ -14,7 +14,6 @@ class LoginController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: move to application level?
         Github.singleton.onAuthorize = segueToHomeController
         Github.singleton.onError = onLoginError
     }
@@ -31,12 +30,12 @@ class LoginController: BaseViewController {
     }
 
     private func segueToHomeController() {
-        logger.info("segueToHomeController()", "App authorized, moving to home controller...")
+        logger.info("segueToHomeController()", "Segue to home controller...")
         performSegueWithIdentifier("login_home", sender: self)
     }
 
     @IBAction func onLoginButton() {
-        logger.info("onLoginButton()", "Transferring control to github for authorization...")
+        logger.info("onLoginButton()", "Login button tapped!")
         Github.singleton.authorize()
     }
 

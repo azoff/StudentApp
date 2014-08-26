@@ -16,9 +16,7 @@ class HomeController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        logger.info("viewDidLoad()", "Loading user session...")
         User.current(success: {
-            self.logger.info("viewDidLoad()", "Found user \($0.objectId)!")
             self.label.text = "Hello \($0.firstName!)!"
         }, failure: {
             self.logger.error("failure()", $0)

@@ -60,14 +60,17 @@ class Github  {
     var account : NXOAuth2Account? {
         didSet {
             if account != nil {
+                logger.info("account", "OAuth Account Authorized: \(account!.identifier)")
                 self.onAuthorize?()
             } else {
+                logger.info("account", "OAuth Account Deauthorized...")
                 self.onDeauthorize?()
             }
         }
     }
 
     func authorize() {
+        logger.info("authorize()", "Authorizing with github...")
         oauth.requestAccessToAccountWithType(accountType)
     }
 
@@ -90,18 +93,23 @@ class Github  {
             sendProgressHandler: nil, // TODO: add a progress handler
             responseHandler: { (_, data : NSData?, error : NSError?) in
                 if let error = error {
+                    self.logger.error("user(success:failure:)", error)
                     failure?(error)
                 } else if let data = data {
                     if let user = User.object(data) {
+                        self.logger.info("user(success:failure:)", "Found user \(user.alias!)!")
                         success?(user)
-                    } else {
-                        failure?(Error("Unable to parse network data", domain:"GithubDomain"))
+                        return
                     }
                 }
+                let error = Error("Unable to parse network data", domain:"GithubDomain")
+                self.logger.error("user(success:failure:)", error)
+                failure?(error)
             });
     }
 
     func handleRedirectURL(url : NSURL) -> Bool {
+        logger.info("handleRedirectURL(url:)", "Callback received, \(url)")
         return oauth.handleRedirectURL(url)
     }
 
