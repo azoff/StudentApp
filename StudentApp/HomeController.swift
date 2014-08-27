@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: BaseViewController {
+class HomeController: AppViewController {
 
 	@IBOutlet weak var label: UILabel!
 

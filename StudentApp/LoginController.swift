@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: BaseViewController {
+class LoginController : AppViewController {
 
 	private let logger = Logger("LoginController")
 
@@ -22,6 +22,8 @@ class LoginController: BaseViewController {
 		super.viewDidAppear(animated)
 		if Github.singleton.isAuthorized {
 			segueToHomeController()
+		} else {
+			viewFadeIn(1)
 		}
 	}
 
@@ -30,11 +32,13 @@ class LoginController: BaseViewController {
 	}
 
 	private func segueToHomeController() {
+        viewFadeOut(0.5)
 		logger.info("segueToHomeController()", "Segue to home controller...")
 		performSegueWithIdentifier("login_home", sender: self)
 	}
 
 	@IBAction func onLoginButton() {
+        viewFadeOut(0.5)
 		logger.info("onLoginButton()", "Login button tapped!")
 		Github.singleton.authorize()
 	}

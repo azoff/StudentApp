@@ -14,19 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	let logger = Logger("AppDelegate")
 
-	private func initWindow() {
-		window?.backgroundColor = Theme.Color.WindowBackground
-	}
-
-	func application(application: UIApplication!, openURL url: NSURL!,
-		sourceApplication: String!, annotation: AnyObject!) -> Bool {
+	func application(application: UIApplication!, openURL url: NSURL!, sourceApplication: String!, annotation: AnyObject!) -> Bool {
 		logger.info("application(...openURL...)", "App activated by URL \(url)")
 		return Github.singleton.handleRedirectURL(url)
 	}
 
-	func application(application: UIApplication!,
-		didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-		initWindow()
+	func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+		Theme.applyToWindow(window)
 		logger.info("application(...didFinishLaunching...)", "App launched!")
 		return ParseApp.singleton.trackLaunch(launchOptions)
 	}
