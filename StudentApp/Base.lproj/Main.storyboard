@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
@@ -16,20 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRH-rW-5jF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRH-rW-5jF" customClass="AppButton" customModule="StudentApp" customModuleProvider="target">
                                 <rect key="frame" x="98" y="494" width="124" height="30"/>
                                 <state key="normal" title="Login With Github">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalTitleThemedColorName" value="LightBlue"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onLoginButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QOq-0H-Wjo"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRT-M5-n5U" userLabel="Logo" customClass="AppSVGImageView" customModule="StudentApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="167" width="288" height="38"/>
+                                <color key="backgroundColor" red="0.270588249" green="0.84313732389999996" blue="0.392156899" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="yWM-dD-0Rk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageName" value="logo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="eRH-rW-5jF" secondAttribute="centerX" id="97d-By-XHk"/>
+                            <constraint firstAttribute="centerY" secondItem="oRT-M5-n5U" secondAttribute="centerY" constant="98" id="9jP-8q-mgY"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eRH-rW-5jF" secondAttribute="bottom" constant="44" id="a5t-eq-Aae"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oRT-M5-n5U" secondAttribute="trailing" id="c7Y-fz-q2U"/>
+                            <constraint firstItem="oRT-M5-n5U" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="dtd-dw-VDz"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -38,7 +55,7 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <segue destination="Apq-oE-NEM" kind="modal" identifier="login_home" id="WUQ-WE-ywl"/>
+                        <segue destination="Apq-oE-NEM" kind="showDetail" identifier="login_home" id="WUQ-WE-ywl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

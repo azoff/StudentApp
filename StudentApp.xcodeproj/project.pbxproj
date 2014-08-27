@@ -11,6 +11,7 @@
 		3CD1A177F0CF61BB5E8C62B6 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A7BC50B681262B191F4D /* Assignment.swift */; };
 		3CD1A2EE3757FAD70F69D613 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A3B91A9F8304991E5A6C /* Week.swift */; };
 		3CD1A42BDA798AAD8A8E3C53 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A65698D54E121F58127E /* Group.swift */; };
+		3CD1A6C4CD949DCB0D3039E2 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1AFA3FA828083013EC42D /* AppButton.swift */; };
 		3CD1AA16EFEA1648EEBCCEA5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1AF4308E9764D80EA261F /* Session.swift */; };
 		3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1AFD6C5B70AC5F24592CC /* .gitignore */; };
 		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
@@ -48,10 +49,9 @@
 		C98C7BC219A679C3008D1650 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC119A679C3008D1650 /* Security.framework */; };
 		C98C7BC419A679D9008D1650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */; };
 		C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* ParseApp.swift */; };
-		C9DA118F19AD482B00855700 /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9DA118E19AD482B00855700 /* logo.svg */; };
-		C9DA11A319AE432300855700 /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA11A219AE432300855700 /* LogoImageView.swift */; };
 		C9DA11A519AE4EE000855700 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DA119719AD48CA00855700 /* libSVGKit-iOS.1.2.0.a */; };
-		C9DA11A719AE594900855700 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DA11A619AE594900855700 /* Foundation.framework */; };
+		C9DA11B519AE803600855700 /* AppSVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA11B419AE803600855700 /* AppSVGImageView.swift */; };
+		C9DA11B819AE805500855700 /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9DA11B719AE805500855700 /* logo.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +91,7 @@
 		3CD1A7BC50B681262B191F4D /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		3CD1ACCAEAC7E64F735E7C08 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		3CD1AF4308E9764D80EA261F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		3CD1AFA3FA828083013EC42D /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		3CD1AFD6C5B70AC5F24592CC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153519AAD55F001890A8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
@@ -132,10 +133,9 @@
 		C98C7BC519A67A68008D1650 /* ParseApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseApp.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C98C7BC819A67E22008D1650 /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = Submodules/OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		C98C7BD419A6879A008D1650 /* StudentApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudentApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C9DA118E19AD482B00855700 /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.svg; path = logo.svg; sourceTree = "<group>"; };
 		C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "Submodules/SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
-		C9DA11A219AE432300855700 /* LogoImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoImageView.swift; path = StudentApp/LogoImageView.swift; sourceTree = SOURCE_ROOT; };
-		C9DA11A619AE594900855700 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9DA11B419AE803600855700 /* AppSVGImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSVGImageView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		C9DA11B719AE805500855700 /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = logo.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DA11A719AE594900855700 /* Foundation.framework in Frameworks */,
 				C9DA11A519AE4EE000855700 /* libSVGKit-iOS.1.2.0.a in Frameworks */,
 				C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */,
 				C98C7BB019A67951008D1650 /* Parse.framework in Frameworks */,
@@ -219,7 +218,8 @@
 		C94578A419A4715100073562 /* StudentApp */ = {
 			isa = PBXGroup;
 			children = (
-				C9DA118D19AD482B00855700 /* SVG */,
+				C9DA11B619AE805500855700 /* Images.svgs */,
+				C9DA11B019AE7FF300855700 /* Views */,
 				C90C320919ABF1B5003382C9 /* Extensions */,
 				C908153419AAD4C2001890A8 /* Models */,
 				C976ADB819A56EA600436917 /* Utils */,
@@ -311,7 +311,6 @@
 		C98C7BAE19A67951008D1650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9DA11A619AE594900855700 /* Foundation.framework */,
 				C98C7BC319A679D9008D1650 /* SystemConfiguration.framework */,
 				C98C7BC119A679C3008D1650 /* Security.framework */,
 				C98C7BBF19A679B7008D1650 /* MobileCoreServices.framework */,
@@ -346,21 +345,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C9DA118D19AD482B00855700 /* SVG */ = {
-			isa = PBXGroup;
-			children = (
-				C9DA11A219AE432300855700 /* LogoImageView.swift */,
-				C9DA118E19AD482B00855700 /* logo.svg */,
-			);
-			path = SVG;
-			sourceTree = "<group>";
-		};
 		C9DA119319AD48C900855700 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				C9DA119719AD48CA00855700 /* libSVGKit-iOS.1.2.0.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C9DA11B019AE7FF300855700 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA11B419AE803600855700 /* AppSVGImageView.swift */,
+				3CD1AFA3FA828083013EC42D /* AppButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C9DA11B619AE805500855700 /* Images.svgs */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA11B719AE805500855700 /* logo.svg */,
+			);
+			path = Images.svgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,8 +486,8 @@
 			files = (
 				C94578AD19A4715100073562 /* Main.storyboard in Resources */,
 				C945790A19A5337800073562 /* Credentials.plist in Resources */,
+				C9DA11B819AE805500855700 /* logo.svg in Resources */,
 				C94578AF19A4715100073562 /* Images.xcassets in Resources */,
-				C9DA118F19AD482B00855700 /* logo.svg in Resources */,
 				3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +515,7 @@
 				C976ADC819A5BADF00436917 /* BaseViewController.swift in Sources */,
 				C94578CA19A51EC900073562 /* Theme.swift in Sources */,
 				C976ADBA19A56EB800436917 /* Plist.swift in Sources */,
+				C9DA11B519AE803600855700 /* AppSVGImageView.swift in Sources */,
 				C90C321719AC687E003382C9 /* Error.swift in Sources */,
 				C976ADB419A565AB00436917 /* Github.swift in Sources */,
 				C94578AA19A4715100073562 /* LoginController.swift in Sources */,
@@ -517,13 +525,13 @@
 				C908153619AAD55F001890A8 /* Model.swift in Sources */,
 				C94578A819A4715100073562 /* AppDelegate.swift in Sources */,
 				C90C320B19ABF1C8003382C9 /* JSONValue+any.swift in Sources */,
-				C9DA11A319AE432300855700 /* LogoImageView.swift in Sources */,
 				C976ADC419A57B6100436917 /* Info.swift in Sources */,
 				3CD1A177F0CF61BB5E8C62B6 /* Assignment.swift in Sources */,
 				3CD1A0D849E14D9FBE53B391 /* Class.swift in Sources */,
 				3CD1A2EE3757FAD70F69D613 /* Week.swift in Sources */,
 				3CD1AA16EFEA1648EEBCCEA5 /* Session.swift in Sources */,
 				3CD1A42BDA798AAD8A8E3C53 /* Group.swift in Sources */,
+				3CD1A6C4CD949DCB0D3039E2 /* AppButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
