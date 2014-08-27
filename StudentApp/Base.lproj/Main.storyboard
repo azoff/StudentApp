@@ -38,7 +38,6 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <outlet property="view" destination="kh9-bI-dsS" id="Q3N-J1-Lso"/>
                         <segue destination="Apq-oE-NEM" kind="modal" identifier="login_home" id="WUQ-WE-ywl"/>
                     </connections>
                 </viewController>
