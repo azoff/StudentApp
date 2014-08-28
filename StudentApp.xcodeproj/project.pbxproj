@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CD1A00855796693CA6D02C5 /* GithubButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A7409C440E247B7AC5DF /* GithubButton.swift */; };
 		3CD1A0D849E14D9FBE53B391 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1ACCAEAC7E64F735E7C08 /* Class.swift */; };
 		3CD1A177F0CF61BB5E8C62B6 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A7BC50B681262B191F4D /* Assignment.swift */; };
 		3CD1A2EE3757FAD70F69D613 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A3B91A9F8304991E5A6C /* Week.swift */; };
 		3CD1A42BDA798AAD8A8E3C53 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A65698D54E121F58127E /* Group.swift */; };
 		3CD1A6C4CD949DCB0D3039E2 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1AFA3FA828083013EC42D /* AppButton.swift */; };
 		3CD1AA16EFEA1648EEBCCEA5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1AF4308E9764D80EA261F /* Session.swift */; };
+		3CD1AB3B3F28D86439454829 /* CAGradientLayer+prependSublayerTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1A9B7C0D56677342BDB76 /* CAGradientLayer+prependSublayerTo.swift */; };
 		3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1AFD6C5B70AC5F24592CC /* .gitignore */; };
+		C9003AF419AEA58C0056984F /* codepath.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9003AF219AEA58C0056984F /* codepath.svg */; };
+		C9003AF519AEA58C0056984F /* github.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9003AF319AEA58C0056984F /* github.svg */; };
 		C908153019AA64DA001890A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908152F19AA64DA001890A8 /* SwiftyJSON.swift */; };
 		C908153319AAD2A6001890A8 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C7BD019A67E22008D1650 /* libOAuth2Client.a */; };
 		C908153619AAD55F001890A8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C908153519AAD55F001890A8 /* Model.swift */; };
@@ -51,7 +55,6 @@
 		C98C7BC619A67A68008D1650 /* ParseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98C7BC519A67A68008D1650 /* ParseApp.swift */; };
 		C9DA11A519AE4EE000855700 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DA119719AD48CA00855700 /* libSVGKit-iOS.1.2.0.a */; };
 		C9DA11B519AE803600855700 /* AppSVGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA11B419AE803600855700 /* AppSVGImageView.swift */; };
-		C9DA11B819AE805500855700 /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = C9DA11B719AE805500855700 /* logo.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,11 +91,15 @@
 /* Begin PBXFileReference section */
 		3CD1A3B91A9F8304991E5A6C /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		3CD1A65698D54E121F58127E /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		3CD1A7409C440E247B7AC5DF /* GithubButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubButton.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		3CD1A7BC50B681262B191F4D /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		3CD1A9B7C0D56677342BDB76 /* CAGradientLayer+prependSublayerTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+prependSublayerTo.swift"; sourceTree = "<group>"; };
 		3CD1ACCAEAC7E64F735E7C08 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		3CD1AF4308E9764D80EA261F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		3CD1AFA3FA828083013EC42D /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		3CD1AFD6C5B70AC5F24592CC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		C9003AF219AEA58C0056984F /* codepath.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = codepath.svg; sourceTree = "<group>"; };
+		C9003AF319AEA58C0056984F /* github.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = github.svg; sourceTree = "<group>"; };
 		C908152F19AA64DA001890A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Submodules/SwiftyJSON/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153519AAD55F001890A8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
 		C908153719AAEBDA001890A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
@@ -135,7 +142,6 @@
 		C98C7BD419A6879A008D1650 /* StudentApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudentApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9DA119219AD48C900855700 /* SVGKit-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SVGKit-iOS.xcodeproj"; path = "Submodules/SVGKit/SVGKit-iOS.xcodeproj"; sourceTree = "<group>"; };
 		C9DA11B419AE803600855700 /* AppSVGImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSVGImageView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
-		C9DA11B719AE805500855700 /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = logo.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 				C90C320719ABF01D003382C9 /* JSONValue+lookup.swift */,
 				C90C320A19ABF1C8003382C9 /* JSONValue+any.swift */,
 				C90C321419AC19AD003382C9 /* Model+json.swift */,
+				3CD1A9B7C0D56677342BDB76 /* CAGradientLayer+prependSublayerTo.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +365,7 @@
 			children = (
 				C9DA11B419AE803600855700 /* AppSVGImageView.swift */,
 				3CD1AFA3FA828083013EC42D /* AppButton.swift */,
+				3CD1A7409C440E247B7AC5DF /* GithubButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -365,7 +373,8 @@
 		C9DA11B619AE805500855700 /* Images.svgs */ = {
 			isa = PBXGroup;
 			children = (
-				C9DA11B719AE805500855700 /* logo.svg */,
+				C9003AF219AEA58C0056984F /* codepath.svg */,
+				C9003AF319AEA58C0056984F /* github.svg */,
 			);
 			path = Images.svgs;
 			sourceTree = "<group>";
@@ -486,9 +495,10 @@
 			files = (
 				C94578AD19A4715100073562 /* Main.storyboard in Resources */,
 				C945790A19A5337800073562 /* Credentials.plist in Resources */,
-				C9DA11B819AE805500855700 /* logo.svg in Resources */,
 				C94578AF19A4715100073562 /* Images.xcassets in Resources */,
+				C9003AF419AEA58C0056984F /* codepath.svg in Resources */,
 				3CD1AE3E02FCE5CA681EAFB5 /* .gitignore in Resources */,
+				C9003AF519AEA58C0056984F /* github.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +542,8 @@
 				3CD1AA16EFEA1648EEBCCEA5 /* Session.swift in Sources */,
 				3CD1A42BDA798AAD8A8E3C53 /* Group.swift in Sources */,
 				3CD1A6C4CD949DCB0D3039E2 /* AppButton.swift in Sources */,
+				3CD1A00855796693CA6D02C5 /* GithubButton.swift in Sources */,
+				3CD1AB3B3F28D86439454829 /* CAGradientLayer+prependSublayerTo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

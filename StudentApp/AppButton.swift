@@ -1,16 +1,53 @@
 class AppButton : UIButton {
 
-	var normalTitleThemedColorName : String? {
+	required init(coder aDecoder: NSCoder) {
+		super.init(coder:aDecoder)
+	}
+
+	override func awakeFromNib() {
+		render()
+	}
+
+	// meant to be overridden
+
+	func render() {
+
+	}
+
+	func didHighlight() {
+
+	}
+
+	func didUnhighlight() {
+
+	}
+
+	func didSelect() {
+
+	}
+
+	func didUnselect() {
+
+	}
+
+	override var highlighted : Bool {
 		didSet {
-			if let name : String = normalTitleThemedColorName {
-				let color : UIColor = Theme.colorWithName(name)
-				setTitleColor(color, forState:UIControlState.Normal)
+			if (highlighted) {
+				self.didHighlight()
+			} else {
+				self.didUnhighlight()
 			}
 		}
 	}
 
-	required init(coder aDecoder: NSCoder) {
-		super.init(coder:aDecoder)
+	override var selected : Bool {
+		didSet {
+			if (selected) {
+				self.didSelect()
+			} else {
+				self.didUnselect()
+			}
+		}
 	}
 
 }

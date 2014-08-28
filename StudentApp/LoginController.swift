@@ -32,13 +32,11 @@ class LoginController : AppViewController {
 	}
 
 	private func segueToHomeController() {
-        viewFadeOut(0.5)
 		logger.info("segueToHomeController()", "Segue to home controller...")
 		performSegueWithIdentifier("login_home", sender: self)
 	}
 
 	@IBAction func onLoginButton() {
-        viewFadeOut(0.5)
 		logger.info("onLoginButton()", "Login button tapped!")
 		Github.singleton.authorize()
 	}
